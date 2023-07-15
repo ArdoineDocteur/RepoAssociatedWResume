@@ -1,0 +1,14 @@
+Shape Name: Rectangle Shape Information: Length and Width: 5 4 Shape Area: 20.0
+Shape Name: Circle Shape Information: Radius: 4 Shape Area: 50.26548245743669
+Shape Name: Right Triangle Shape Information: Length and Width: 3 2 Shape Area: 3.0
+Shape Name: Rectangle Shape Information: Length and Width: 2 7 Shape Area: 14.0
+Shape Name: Circle Shape Information: Radius: 8 Shape Area: 201.06192982974676
+Shape Name: Right Triangle Shape Information: Length and Width: 5 6 Shape Area: 15.0
+Shape Name: Rectangle Shape Information: Length and Width: 9 2 Shape Area: 18.0
+Shape Name: Circle Shape Information: Radius: 2 Shape Area: 12.566370614359172
+Shape Name: Rectangle Shape Information: Length and Width: 5 5 Shape Area: 25.0
+Shape Name: Right Triangle Shape Information: Length and Width: 9 9 Shape Area: 40.5
+Shape Name: Circle Shape Information: Radius: 7 Shape Area: 153.93804002589985
+Shape Name: Rectangle Shape Information: Length and Width: 3 8 Shape Area: 24.0
+Shape Name: Circle Shape Information: Radius: 9 Shape Area: 254.46900494077323
+Shape Name: Right Triangle Shape Information: Length and Width: 2 2 Shape Area: 2.0
