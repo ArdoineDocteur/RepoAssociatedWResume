@@ -1,0 +1,21 @@
+/* The purpose of this css document is to house all of the general code used for our youtube website.
+*/
+p
+            {
+                font-family: Roboto, Arial; /*<-- Here we use the font family to insert the font style we want for all of the text, that uses
+                the html tag called <p>(paragraph). The ,Arial is called font stacking which allows us to set it to a backup style if a 
+                    certain web app can't process the font style.*/
+                margin-top: 0;
+                margin-bottom:0;
+            }
+            body
+            {   /*When doing inheritance, remember the fact that css runs its code using priority. This feature is called css specificity.*/
+                font-family: Roboto, Arial;/*<-- This is here to prove that inheritance in HTML works.*/
+                margin: 0;/*<-- This was done to remove all the margins on the body since they were no longer needed.*/
+                padding-top: 80px;
+                border-bottom-width: 1px;/*The border css tag has another property that modifies either the top, left, right, or bottom of an element*/ 
+                border-bottom-color: rgb(228,228,228);
+                padding-left: 96px;
+                padding-right: 24px;
+                background-color: rbg(248,248,248); 
+            }

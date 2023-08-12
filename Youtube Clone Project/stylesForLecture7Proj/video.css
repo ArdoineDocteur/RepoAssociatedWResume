@@ -1,0 +1,144 @@
+/*The purpose of this file is to contain all of the neccessary css code for everything on the website besides the header.*/
+            
+            .thumbnail
+            { /*One thing to remember is that NOT ALL CSS TAGS/ELEMENTS CAN BE APPLIED TO IMAGES. Use your CSS knowledge wisely and in ways that make sense. A few obvious elements to use for images are height and widrth*/
+                /* width: 300px; <-- This line of code was removed to implement the neccessary code to have the "frame" of the page be maintained when the window is being resized.*/
+                width: 100%;/*<-- Setting the width to 100% allows the frame to be maintained in when the window of the web app is being manipulated.*/
+                /* height: 300px; */
+                /*object-fit: contain; /*<-- This is one of the CSS elements exclusive to images. This allows us to determine what happens when the sizes change. PN: I believe this helps us preserve the previous shape it was before we started changing it.*/
+                /*For images, when you change the height or width, the latter changes simulataneously to maintain the previous shape. The Property contain is used to preserve the original image whilst applying the dimnesions you give it(using width and height).*/
+                /*object-position: bottom ;/*<-- This CSS tag, exclusive to images, allows us to pan the image to a certain direction. We can choose right or left, or top or bottom.*/
+                /* border-width:2px; */
+                /* border-style:solid; */
+                /* border-color:red; */
+                /*In case you are wondering about the border CSS tag, Refer to lecture 2 or 3. Also, commented out everything else since we don't need it.*/
+                /* display: block; <-- This is used to change the img's default element(inline-block) to the block element(which makes the image take up an ENTIRE LINE.) */
+                /*^^^ This display command here isn't needed since the width 100% code aboves' purpose.*/
+            }
+            /* .Search-bar <-- The search bar code was no longer needed since our search bar was moved into a div from the flexbox lecture.
+            {   In short, many of the things we learned from CSS can be used to modify this text box.
+                font-size: 20px; <-- THis can be used to change the size of the text box, but it is mainly useed to change the font size of the input(No pun intended :)).
+                margin-left: 12px;
+                display: block; <-- We did this since block elements take up an entire line. This allows the search bar to have its own space @ the top of the page.
+            } */
+            /* .Video-Title
+            {
+                width: 300px; NOTE: This part is commented out because the image and the title began to overflow which is NOT what we want.
+            } */
+            /* .Video-Title,.Video-Author /*<-- Using the syntax when naming this CSS psuedo-class, is used to target multiple labels at the same time.
+            The syntax for doing this is: .<<class id 1>>,.<<class id 2>>,.<<class id 3>>,...{//Body of the pseudo-class}. Using this strategy is useful when you want multiple classes/tags to share the same styling properties.*/
+            /* { */
+                /* display: inline-block; <-- This line of code is the CSS display element/property which is used to style an HTML element to a block element, or an inline-block element. */
+            /* } Commented out this portion, since it wasn't needed for the primary objective. However, read the text in this commented section for VALUABLE INFORMATION.*/ 
+
+            .video-title
+            {   
+                margin-top: 0; /*<-- Here, we have the video title's margin set to zero because, by default, paragraphs have margins @ the top and the bottom.*/
+                font-size: 14px;
+                font-weight: 500; /*The on lines 92 and 93 are used to adjust the font size and the boldness of the font*/
+                line-height: 20px; /*<-- THis is used to conduct line spacing in the paragraphs. Refer to lecture(insert # here in future) fror more information */
+                margin-bottom: 10px;
+            }
+            .video-preview
+            {   /*This body of the pseudocode is commented out because we are using the css grid to represent out data in our html file.
+                The column feature from css is responsible for getting the spacing.*/
+                /* display: inline-block; <-- This changes the default element(block element) to the inline-block element */
+                /* width: 300px; */
+                /* vertical-align: top;<-- We use this to align the divs. Refer to lecture(insert number here when found) for more information regarding aligning HTML elements. */
+                /* margin-right: 15px;<-- We use this to space out the divs. Particularly, we use the CSS property called margin using the right, left, top, bottom, attributes. */
+            }
+            .video-info-grid
+            {/*This psuedoclass is used to create our css grid.*/
+                display: grid;
+                grid-template-columns: 50px 1fr;/*<-- This is used to set our grid columns.*/
+            }
+             .channel-picture
+            {  
+                /* background-color: gray; */
+                /* display: inline-block; /*<-- Here we transform the div to inline-block element to display a horizontal layout. */
+                /* width: 50px; */
+                /* margin-top: 30px; */
+                /* vertical-align: top; <-- As said before, we use the vertical css property to align html elements. This line of code aligns the picture @ the top of the div. */
+                /*The text above is commented out because we used our CSS grid to create the display we need.*/ 
+            } 
+            .video-info
+            {
+                /* display: block; <-- Here, we transform the vid info into a block element so that each paragraph can take up their own individual line to use the vertical layout. */
+                /* display: inline-block; /*<-- Here we transform the vid info into a inline-block element so that it only takes up as much space as it needs to, so there is */
+                /* room for the pfp to be beside the vid information.*/
+                /* width:200px; */
+                /*The text above is commented out because we used our CSS grid to create the display we need.*/
+                /* background-color: grey;<-- When this was enabled, the background color took up too much space. This is because of the display property involving the
+                inline-block elements.*/
+            }
+            .profile-picture
+            {
+                /*width: 100%; <-- This is set @ 100% because we want the picture to take up all the space in the container, with the container being channel-picture. We colud
+                also replace 100% with the .channel-picture's width which is 50px.*/
+                width: 36px;
+                border-radius: 50px; /*<-- Here, we use this to create a circular border to replicate youtube's technique for pfps.*/
+            }
+            .thumbnail-row
+            {
+                margin-bottom: 8px;/*<-- This is used to create spacing between elements. Refer to lecture(insert here when found) for more information.*/
+                position: relative;/*<-- As mentioned in the Position absolute and relative lecture, this is used so we can put elements in the dimensions of another element(in this case the thumbnail)*/
+            }
+            .video-author,.video-stats
+            {
+                color: rgb(96, 96, 96);
+                font-size: 12px;
+                /* color: rgb(96, 96, 96); <-- Remember that the color is used to change the color of text(and might be used to change the color of shapes, etc.) */
+            }
+            .video-author
+            {
+                margin-bottom: 4px;
+            }
+            .video-grid
+            {   /*In this psuedoclass, we take a similar approach compared to the approach in the grid.html file. If you want better 
+                understanding, refer to that file.*/
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 16px;
+                row-gap: 40px;
+                
+            }
+            @media (max-width: 750px) { /*The @ media with the command that follows is called a media query. These are responsible for implementing the responsive design. THe max-width
+                allows us to set a limit on the width of a page which may be dependent on the window size. Also, within the body
+                of the media query, we can target classes to adjust certain ways based on the window size.*/
+                .video-grid
+                {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+            @media (min-width: 751px) and (max-height: 999px)
+            {
+                .video-grid
+                {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+            }
+            @media (min-width: 1000px)
+            {
+                .video-grid
+                {
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                }
+            }
+            /*These media queries allow us to adjust the flexbox columns based on the window size. THIS IS VERY IMPORTANT IN THE FUTURE FOR WEBSITE CREATIONS.*/
+            .video-time
+            {   
+                /* font-family: Roboto, Arial; <-- This is commented out because this line of code lies in the video-grid to prove that inheritance in html is present. */
+                font-size: 12px;
+                font-weight: 500;/*In case you forgot from the notes from the one of the earlier lectures, font weight is used to adjust the boldness of an object. Setting the value to 400, 600, and 700 are regular, semibold, and bold respectively.*/
+                padding-left: 2px;
+                padding-right: 2px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                border-radius: 2px;
+                background-color: black;
+                color: white;
+                position: absolute;
+                bottom: 8px;
+                right: 5px;
+                /*The two lines of code above are used to put the time stamp in the bottom right corner.*/
+            }

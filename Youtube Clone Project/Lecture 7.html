@@ -1,0 +1,399 @@
+
+<!--(Images and Text Boxes)
+-Here we are beginning the project to create the intro website of youtube.
+-To implement images onto your websites, you need to use the HTML element called img. This element is similar to the link
+element due to the fact that it is a void element. Remember that void elements do not require closing tags. Refer to lecture
+6, for more information.
+-Creating a text box(search bar) involves using the HTML tag called input. Specifically, using the tag with its attribute called type
+and assigning "text" to the type attribute. One fun fact is the search word before you begin typing is called a placeholder. Refer to
+the code below for an example.
+-In the second part of the lecture, I was introduced to CSS Display Properties. Also, we continued building the website for youtube.
+[CSS Display Property]
+-The CSS Display property is responsible for text boxes, images, etc. aligning by default instead of text, such as the bodies of paragraph tags, not
+being aligned with text boxes, images, etc. There are three types of elements which are the block element(block elements take up the entire line. Paragraphs by default
+take up the entire line. Basically, block elements take up the entire line. ), inline-block elements(these elements only takes up as much space as needed opposed to
+block elements that take up the ENTIRE LINE.), and the inline element(These elemenets appear within a line of text). An example of an inline-element
+are the strong, span, and other elements that appear within lines of texts. Examples of inline-block elements are text boxes and images. The first two elements are used to determine
+how things would be aligned on a website.
+-The CSS Display property allows us to switch from block to inline-block elements and vice versa. PN: This is useful for creating video preview tabs for video-based websites.
+[The <div> element]
+-The div element stands for division. For simplicity, div is simply a box. The syntax for the div element is <div>//Body of the div html tag</div>.
+By default, the div is a block element. As learned previously, we can change the element to an inline-block element using the CSS display property.    
+-Another thing to know is that div elements can contain other elements. Due to this, divs are used as containers. Divs allow us to group elements
+together. PN: This is important for website design. 
+-When using elements within divs(particularly block elements like paragraphs(<p>), images, etc.) you find that the block elements simply take up the
+ENTIRE Line in their container. This is why, when block elements AREN'T in containers, it takes up an entire line on the webpage. This is why divs
+are so great. Another thing to remember is that inline-block elements only take up as much space as they need to. 
+[Nested Layouts Technique]
+-Basically, it revolves around the types of layouts. These two types are vertical(this is when items are on top of each other) and horizontal(this is when items are BESIDE each other) respectively.
+One example of effective use of this technique is the youtube example below. The youtube example uses a mixture of vertical and horizontal layouts. PN: This is
+one of the most important concepts in HTML which allows you to, theoretically, create ANYYY website. PN: When trying to come up with web designs, use this layout technique
+and the google drawing editor to create blueprints for future html websites. I am thinking about creating the perfect template for creating websites to make profit
+from making websites for people's businesses.
+-IMPT: Remember that divs by default have a width of 100%(or pixels). This can be the reason why, in youtube replications, you can't see the text being
+next to the video description to achieve the horizontal layout. To fix this issue, you must decrease the width just enough for satisfaction.
+-The basis of the youtube project is HEAVILY on the nested layouts technique.
+[CSS Grid]
+-CSS Grid serves as a better alternative to the nested layouts technique. The major flaw of the technique learned(nested layouts technique) is the flaws
+of the display inline-block element. Particularly, the way that it is shown on the websites. One of its flaws is its alignment issues. CSS grid allows
+us to create "perfectly aligned horizontal layouts".
+-Another thing to know is that to align things vertically in a grid, use the css property align with the css attribute center.
+[Flexbox]
+-FlexBox is another way to create layouts. It is similar to CSS grid but it's more Flexible. Most of the notes will be on the flexbox.html file.
+-Another thing to know is that in this flexbox lecture, we moved our css code to separate files.
+-One thing to know is that for content size html objectives, use a flexbox and to create a grid for displaying data, use a css grid. For creating the
+video info that involved the nested layouts technique, you can use either a flexbox or a grid.
+[Nested Flexbox]
+-This is a technique that involves creating a flexbox within a flexbox. This heavily involves divs since, div flexboxes DO NOT "stretch" to nested divs.
+Due to this, if you want to use the properties that are exclusive to flexbox, you must apply the css flex display onto that nested div. 
+-In this part of the lesson, we also learned about making shrinkable elements. Much of the things learned in this lesson, are simply an extension of what
+was learned in the flexbox lecture.
+-Extra notes: When planning out websites, it is CRUCIAL to draw a blueprint first. Also, NEVER forget the use of divs, and ALWAYS GET CREATIVE!
+[CSS Position]
+-The purpose of the CSS position property is helpful for keeping the header @ the top of the page while scrolling, and for adding information about
+elements. One way this is used, on youtube, is for displaying the length of the video, telling the user the amount of notifications they have, and more.
+-For this part, an example html file was created to display the perks that this css property brings called position.html.
+[Position Absolute and Relative]
+-Position Absolute and Relative are values of the position css property which is used to created fixed elements in html. As the previous lecture, the examples regarding
+this topic will be in the position.html file.
+-Another thing to know is that the position static property is uneffected by z-index css property.
+-EN: If you haven't already, finish adding the links to the videos in your website. ANd if you would like, change the profile picture to something else(pfp changed to image of me).
+[More CSS Features]
+-One of the useful CSS Features are responsive design. This is the feature that's responsible for the display for being intact when the images are adjusted.
+This feature is carried out using a MEDIA QUERY. Another thing to know is that to see the pixel size of your website, open devTools, press the 3 dot vertical line, then press dock bottom
+and the pixel count should be @ the top of the page. Refer to the video.css file for more notes and examples.
+-Another feature are the css shorthand properties. One instance of this are the padding feature. When doing padding: <<pixel count>>, it applies the padding
+in all directions. THis can also be done with margin, and border. For border, the values are width, solid, color respectively.
+-Here, we also learned about inheritance(could be the same concept used in other programming languages). Basically why all of the elements within an element share
+the same attributes, features, etc. as the div that it is located in. In HTML, inheritance mostly occurs in textual features such as font-size, family, etc.
+-Also, we learned about semantic elements. A few examples of these elements are the header and the nav elements. They have the same functionality as the div elements
+with the difference being that they "have meaning to screen readers". A few examples of screen readers are search engines, AI, etc. ANother semantic element is
+the main.
+[COURSE COMPLETE]
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Youtube.com Clone
+        </title>
+        <!--Here we inserted a font using the technique learned in lecture 5 or 6: -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="stylesForLecture7Proj/general.css">
+        <link rel="stylesheet" href="stylesForLecture7Proj/video.css">
+        <link rel="stylesheet" href="stylesForLecture7Proj/header.css">
+        <link rel="stylesheet" href="stylesForLecture7Proj/sidebar.css">
+        <!--NOTE: For css related notes regarding this file, refer to the css files linked above. In case you were
+        wondering how we linked our files, refer to the previous lectures for more information.-->
+    </head>
+    <body>
+        <!--***As you progress through the code, you may realize that there are duplicates in the html file. This is because we used these to create
+        the grid like website design that youtube uses.-->
+        <header class="header">
+            <!--Since youtube's header has 3 sections, we created 3 divs below.-->
+            
+            <div class="left-section">
+                <img class="hamburger-menu" src="./Header Items/hamburger-menu.svg">
+                <img class="youtube-logo" src="Header Items/youtube-logo.svg">
+            </div>
+            <div class="middle-section">
+                <input class="Search-bar" type="text" placeholder="Search">
+                <button class="search-button"> <!--<-- Here we created a class to use a psuedoclass in css to style the button, and did the same for the other button.-->
+                    <img class="search-icon" src="Header Items/search.svg"> <!--For the search(magnifying glass) icon-->
+                    <div class="tooltip">Search</div>
+                </button>
+                <button class="voice-search-button"><!--For the voice search(microphone) icon-->
+                    <img class="voice-search-icon" src="Header Items/voice-search-icon.svg">
+                    <div class="tooltip">Search with Your Voice</div>  
+                </button>
+            </div>
+            <div class="right-section">
+                <div class="upload-icon-container">
+                    <img class="upload-icon" src="Header Items/upload.svg">
+                    <div class="tooltip">Create</div>
+                </div><!--This div is responsible for being able to apply the tooltip feature.-->
+                <div class="youtube-apps-container">
+                    <img class="youtube-apps-icon" src="Header Items/youtube-apps.svg">
+                    <div class="tooltip">Youtube Apps</div>
+                </div>
+                
+                <div class="notifications-icon-container">
+                    <img class="notifications-icon" src="Header Items/notifications.svg">
+                    <div class="tooltip">Notifications</div>
+                <div class="notifications-count">3</div>
+                </div> <!--On this line of code, we put the notifications icon in a div to be able to insert the notifications icon on the bell.-->
+                <img class="current-user-picture" src="Channel Pfps/Headshot for Changing the World Scholarship(Ardoine Docteur).jpg">
+            </div>
+            <nav class="sidebar">
+                <div class="sidebar-link">
+                    <img src="Header Items/home.svg">
+                    <div>Home</div>
+                </div>
+                <div class="sidebar-link">
+                    <img src="Header Items/explore.svg">
+                    <div>Explore</div>
+                </div>
+                <div class="sidebar-link">
+                    <img src="Header Items/subscriptions.svg">
+                    <div>Subscriptions</div>
+                </div>
+                <div class="sidebar-link">
+                    <img src="Header Items/originals.svg">
+                    <div>Originals</div>
+                </div>
+                <div class="sidebar-link">
+                    <img src="Header Items/youtube-music.svg">
+                    <div>Youtube Music</div>
+                </div>
+                <div class="sidebar-link">
+                    <img src="Header Items/library.svg">
+                    <div>Library</div>
+                </div><!--The purpose of these six divs are for creating the boxes on the side bar with their desc and their respective icons.-->
+
+            </nav>
+            
+        </header> <!-- Here we created another div to create the flexbox needed to create the youtube header on the right corner. Also, we moved the search bar here as well, which is why the original one is commented out.-->
+        <!--<input class="Search-bar" type="text" placeholder="Search"> Example of using the input tag. The input tag, like link and img, are void elements because they don't require a closing tag.
+            The input html tag has an html attribute called type which is responsible for creating text boxes. Changing "text" to "checkbox" allows you to create checkboxes for your website. This
+            line of code also represents an example of using a placeholder in text boxes.-->
+            <!-- <input type="checkbox"> -->
+            <main>
+                <section class="video-grid"><!-- <--This Div is used to create the container for our grid.-->
+                    <div class="video-preview">
+                        <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY">
+                        <div class="thumbnail-row"><!--Here, we applied the css to the thumbnail row div and inserted the position: relative there so we can insert the video time in the bottom right corner.-->
+                             <!--Here, we inserted the thumbnail, description, etc. for our first video in this div:
+                        -->
+                            <img class="thumbnail" src="thumbnails/thumbnail-1.webp"> <!-- Here we use the img element with its attribute called src. The src attribute stores the url that the img element refers to to display the image onto the html website.
+                                As we can see, the img tag and the link tag work the same way which means they depend on filepaths to load images onto the websites.
+                            Also, we use the class attribute for html tags again to create unique labels to style specific html tags of the same origin(using psuedoclasses). Refer to Lecture 2 or 3 for more information.--> 
+                            <div class="video-time"> 14:20</div> 
+                        </div>
+                        </a>
+                        <div> 
+                        <!--Here, I removed the img for the pfp and place it into the horizontal layout div to help replicate youtube's representation.-->
+                        </div>
+                        <div class="video-info-grid"> <!-- We use this div, and the nested divs inside to create the horizontal layout that replicates the profile pic and the video desc from youtube.-->
+                        <!--^^After learning about the CSS Grid, we apply our knowledege here to achieve the grid design we need to create the youtube home page.-->    
+                            <div class="channel-picture">
+                                <img src="Channel Pfps/channel-1.jpeg" class="profile-picture"> <!--We use this line of code to insert the profile picture of the youtuber who created the video.-->
+                            </div>
+                        <div class="video-info">
+                            <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY">
+                            <p class="Video-Title"></p><!--IMPT: Remember that to link other website links, etc to your html elements, you must use the href html attribute.-->
+                                Talking Tech and AI with Google CEO Sundar Pichai
+                            </p>
+                        </a>
+                            <p class="Video-Author">
+                                Marques Brownlee
+                            </p>
+                            <p class="Video-Stats">
+                                3.4M views &#183; 6 months ago
+                            </p>
+                        </div>
+                
+                        </div>
+                        
+                    <div>
+                    <!--Here, I removed the desc for the video and placed it into the horizontal layout div to help replicate youtube's representation.-->
+                     </div>   
+                     </div> 
+                    <div class="video-preview"> <!--Here, we copied and pasted our code to have two divs be on the same line. PN: Using and creating templates for your divs will be useful for efficient web design.-->
+                        <!--Here, we inserted the thumbnail, description, etc. for our first video in this div:(Also, we use this as a template for creating the other video display as you can see below):
+                        -->
+                        <div class="thumbnail-row">
+                            <!--Here, we inserted the thumbnail, description, etc. for our first video in this div:
+                       -->
+                           <img class="thumbnail" src="thumbnails/thumbnail-2.webp"> <!-- Here we use the img element with its attribute called src. The src attribute stores the url that the img element refers to to display the image onto the html website.
+                               As we can see, the img tag and the link tag work the same way which means they depend on filepaths to load images onto the websites.
+                           Also, we use the class attribute for html tags again to create unique labels to style specific html tags of the same origin(using psuedoclasses). Refer to Lecture 2 or 3 for more information.--> 
+                           <div class="video-time"> 8:22</div>
+                       </div>
+                       <div> 
+                       <!--Here, I removed the img for the pfp and place it into the horizontal layout div to help replicate youtube's representation.-->
+                       </div>
+                       <div class="video-info-grid"> <!-- We use this div, and the nested divs inside to create the horizontal layout that replicates the profile pic and the video desc from youtube.-->
+                           <div class="channel-picture">
+                               <img src="Channel Pfps/channel-2.jpeg" class="profile-picture"> <!--We use this line of code to insert the profile picture of the youtuber who created the video.-->
+                           </div>
+                       <div class="video-info">
+                           <a href="https://www.youtube.com/watch?v=mP0RAo9SKZk"><!--The a html tag with the href attribute is used to link other websites using the html text, imgs, etc.-->
+                            <p class="Video-Title" style="cursor: pointer;">
+                               Try Not To Laugh Challenge #9
+                           </p>
+                        </a>
+                           <p class="Video-Author">
+                               Markiplier
+                           </p>
+                           <p class="Video-Stats">
+                               19M views &#183; 4 years ago
+                           </p>
+                       </div>
+                
+                       </div>
+                       
+                   <div>
+                   <!--Here, I removed the desc for the video and placed it into the horizontal layout div to help replicate youtube's representation.-->
+                    </div>   
+                    </div>
+                    
+                    <div class="video-preview">
+                        <div class="thumbnail-row"> 
+                             <!--Here, we inserted the thumbnail, description, etc. for our first video in this div:
+                        -->
+                            <img class="thumbnail" src="thumbnails/thumbnail-3.webp"> <!-- Here we use the img element with its attribute called src. The src attribute stores the url that the img element refers to to display the image onto the html website.
+                                As we can see, the img tag and the link tag work the same way which means they depend on filepaths to load images onto the websites.
+                            Also, we use the class attribute for html tags again to create unique labels to style specific html tags of the same origin(using psuedoclasses). Refer to Lecture 2 or 3 for more information.--> 
+                           <div class="video-time"> 9:13</div>
+                            
+                        </div>
+                        <div> 
+                        <!--Here, I removed the img for the pfp and place it into the horizontal layout div to help replicate youtube's representation.-->
+                        </div>
+                        <div class="video-info-grid"> <!-- We use this div, and the nested divs inside to create the horizontal layout that replicates the profile pic and the video desc from youtube.-->
+                        <!--^^After learning about the CSS Grid, we apply our knowledege here to achieve the grid design we need to create the youtube home page.-->    
+                            <div class="channel-picture">
+                                <img src="Channel Pfps/channel-3.jpeg" class="profile-picture"> <!--We use this line of code to insert the profile picture of the youtuber who created the video.-->
+                            </div>
+                        <div class="video-info">
+                            <a class="Video-Title" href="https://www.youtube.com/watch?v=FgjPQQeTh1w" style="cursor: pointer;">
+                                Crazy Tik Toks Taken Moments Before DISASTER
+                            </a>
+                            <p class="Video-Author">
+                                SSSniperWolf
+                            </p>
+                            <p class="Video-Stats">
+                                12M views &#183; 1 year ago
+                            </p>
+                        </div>
+                
+                        </div>
+                        
+                    <div>
+                    <!--Here, I removed the desc for the video and placed it into the horizontal layout div to help replicate youtube's representation.-->
+                     </div>   
+                     </div> 
+                    <div class="video-preview"> <!--Here, we copied and pasted our code to have two divs be on the same line. PN: Using and creating templates for your divs will be useful for efficient web design.-->
+                        <!--Here, we inserted the thumbnail, description, etc. for our first video in this div:(Also, we use this as a template for creating the other video display as you can see below):
+                        -->
+                        <div class="thumbnail-row">
+                            <!--Here, we inserted the thumbnail, description, etc. for our first video in this div:
+                       -->
+                           <img class="thumbnail" src="thumbnails/thumbnail-4.webp"> <!-- Here we use the img element with its attribute called src. The src attribute stores the url that the img element refers to to display the image onto the html website.
+                               As we can see, the img tag and the link tag work the same way which means they depend on filepaths to load images onto the websites.
+                           Also, we use the class attribute for html tags again to create unique labels to style specific html tags of the same origin(using psuedoclasses). Refer to Lecture 2 or 3 for more information.--> 
+                           <div class="video-time"> 22:09</div>
+                           
+                       </div>
+                       <div> 
+                       <!--Here, I removed the img for the pfp and place it into the horizontal layout div to help replicate youtube's representation.-->
+                       </div>
+                       <div class="video-info-grid"> <!-- We use this div, and the nested divs inside to create the horizontal layout that replicates the profile pic and the video desc from youtube.-->
+                           <div class="channel-picture">
+                               <img src="Channel Pfps/channel-4.jpeg" class="profile-picture"> <!--We use this line of code to insert the profile picture of the youtuber who created the video.-->
+                           </div>
+                       <div class="video-info">
+                           <a class="Video-Title" href="https://www.youtube.com/watch?v=094y1Z2wpJg" style="cursor: pointer;">
+                               The Simplest Math Problem No One Can Solve- Collatz Conjecture
+                           </a>
+                           <p class="Video-Author">
+                               Veritasium
+                           </p>
+                           <p class="Video-Stats">
+                               18M views &#183; 4 months ago
+                           </p>
+                       </div>
+                
+                       </div>
+                       
+                   <div>
+                   <!--Here, I removed the desc for the video and placed it into the horizontal layout div to help replicate youtube's representation.-->
+                    </div>   
+                    </div>
+                    
+                    <div class="video-preview">
+                        <div class="thumbnail-row">
+                             <!--Here, we inserted the thumbnail, description, etc. for our first video in this div:
+                        -->
+                            <img class="thumbnail" src="thumbnails/thumbnail-5.webp"> <!-- Here we use the img element with its attribute called src. The src attribute stores the url that the img element refers to to display the image onto the html website.
+                                As we can see, the img tag and the link tag work the same way which means they depend on filepaths to load images onto the websites.
+                            Also, we use the class attribute for html tags again to create unique labels to style specific html tags of the same origin(using psuedoclasses). Refer to Lecture 2 or 3 for more information.--> 
+                           <div class="video-time"> 11:17</div>
+                            
+                        </div>
+                        <div> 
+                        <!--Here, I removed the img for the pfp and place it into the horizontal layout div to help replicate youtube's representation.-->
+                        </div>
+                        <div class="video-info-grid"> <!-- We use this div, and the nested divs inside to create the horizontal layout that replicates the profile pic and the video desc from youtube.-->
+                        <!--^^After learning about the CSS Grid, we apply our knowledege here to achieve the grid design we need to create the youtube home page.-->    
+                            <div class="channel-picture">
+                                <img src="Channel Pfps/channel-5.jpeg" class="profile-picture"> <!--We use this line of code to insert the profile picture of the youtuber who created the video.-->
+                            </div>
+                        <div class="video-info">
+                            <a class="Video-Title" href="https://www.youtube.com/watch?v=86CQq3pKSUw" sty;e="cursor: pointer">
+                               Kadane's Algorithm to Maximum Sum Subarray Problem
+                            </a>
+                            <p class="Video-Author">
+                                CSDojo
+                            </p>
+                            <p class="Video-Stats">
+                                519K views &#183; 5 years ago
+                            </p>
+                        </div>
+                
+                        </div>
+                        
+                    <div>
+                    <!--Here, I removed the desc for the video and placed it into the horizontal layout div to help replicate youtube's representation.-->
+                     </div>   
+                     </div> 
+                    <div class="video-preview"> <!--Here, we copied and pasted our code to have two divs be on the same line. PN: Using and creating templates for your divs will be useful for efficient web design.-->
+                        <!--Here, we inserted the thumbnail, description, etc. for our first video in this div:(Also, we use this as a template for creating the other video display as you can see below):
+                        -->
+                        <div class="thumbnail-row">
+                            <!--Here, we inserted the thumbnail, description, etc. for our first video in this div:
+                       -->
+                           <img class="thumbnail" src="thumbnails/thumbnail-6.webp"> <!-- Here we use the img element with its attribute called src. The src attribute stores the url that the img element refers to to display the image onto the html website.
+                               As we can see, the img tag and the link tag work the same way which means they depend on filepaths to load images onto the websites.
+                           Also, we use the class attribute for html tags again to create unique labels to style specific html tags of the same origin(using psuedoclasses). Refer to Lecture 2 or 3 for more information.--> 
+                           <div class="video-time"> 19:59</div>
+                           
+                       </div>
+                       <div> 
+                       <!--Here, I removed the img for the pfp and place it into the horizontal layout div to help replicate youtube's representation.-->
+                       </div>
+                       <div class="video-info-grid"> <!-- We use this div, and the nested divs inside to create the horizontal layout that replicates the profile pic and the video desc from youtube.-->
+                           <div class="channel-picture">
+                               <img src="Channel Pfps/channel-6.jpeg" class="profile-picture"> <!--We use this line of code to insert the profile picture of the youtuber who created the video.-->
+                           </div>
+                       <div class="video-info">
+                           <a class="Video-Title" href="https://www.youtube.com/watch?v=yXWw0_UfSFg" style="cursor: pointer">
+                               Anything You Can Fit in The Circle I'll Pay For
+                           </a>
+                           <p class="Video-Author">
+                               MrBeast
+                           </p>
+                           <p class="Video-Stats">
+                               141M views &#183; 1 year ago
+                           </p>
+                       </div>
+                
+                       </div>
+                       
+                   <div>
+                   <!--Here, I removed the desc for the video and placed it into the horizontal layout div to help replicate youtube's representation.-->
+                    </div>   
+                    </div>
+                </section>
+    
+            </main>
+                    
+
+    
+</body>
+</html>

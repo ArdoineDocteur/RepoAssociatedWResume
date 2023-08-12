@@ -1,0 +1,180 @@
+.Search-bar
+            {   /*In short, many of the things we learned from CSS can be used to modify this text box.*/
+                font-size: 20px; /*<-- THis can be used to change the size of the text box, but it is mainly useed to change the font size of the input(No pun intended :)).*/
+                margin-left: 12px;
+                display: block; /*<-- We did this since block elements take up an entire line. This allows the search bar to have its own space @ the top of the page.*/
+            }
+            .hamburger-menu
+            { /*Here, we put the neccessary styles for the 3 line icon on the header which was used to replicate youtube's header*/
+                height: 24px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            .youtube-logo
+            {
+                height:20px;
+            }
+            .header
+            {   height: 55px;
+                
+                display: flex;/*<-- This was done to implement the flexbox technique for our header.*/
+                flex-direction: row;
+                justify-content: space-between;
+                /*The code in the lines below are used to apply the position property to the header*/
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background-color: white;
+                z-index: 100;/*<-- The purpose of this is to override the default feature of html which is that element below another appear in front of the one above. Refer to Position absolute and relative for more inforamtion, as well as the position.html file.*/
+
+            }
+            .left-section
+            {
+                /* background-color: lightblue; */
+                /* width: 150px;  These were taken out since we implemented the nested flexbox. Therefore, the left section of the header is identicial to youtube's.*/
+                display: flex;/*The purpose of this line of code is to set the div to become a flexbox. The div is contained in a flexbox, but by default divs are NOT flexboxes. Having flexboxes inside of flexboxes is a technique called nested divs.*/
+                align-items: center;/*Remember that css's align items is exclusive to the css display flex, which is why we had to implement the css display flex property.*/
+            }
+            .middle-section
+            {
+                /* background-color: lightpink; */
+                flex: 1;/*THe flex is implemented here because when the window is being resized, the left and right sections of the youtube header do not move,
+                BUT the middle section(search bar) does.*/
+                margin-left: 70px;
+                margin-right: 35px;
+                max-width: 500px; /*<-- This allows us to set a maximum to the amount of width the middle section can be. This allows the middle section to be flexible when
+                its pixel count is <=300px.*/
+                justify-content: space-between;/*Here we use this line of code to space out the sections of the header evenly.*/
+                display: flex;
+                align-items: center; /*Lines 41 and 42 are used to center the left, middle, and right sections. The flex-direction: row isnt included because it is the default value for flex-direction.*/
+            }
+            .right-section
+            {
+                /* background-color: lightblue; */
+                width: 180px;
+                
+                margin-right: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;/*<-- Allows us to space out the content on the right side evenly.*/
+                flex-shrink: 0;/*IMPT: This line of code is used to prvent the items from shrinking when resizing the window*/
+            }
+            .Search-bar
+            {   width: 0;/*<-- Doing this allows the search bar to shrink when the window is being resized.*/
+                flex: 1;
+                height: 36px;
+                padding-left: 10px;/*Remember that the padding css property allows us to apply spacing between our elements*/
+                font-size: 16px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: gray;
+                border-radius: 2px;
+                box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05) /*The inset keyword allows us to put shadows INSIDE of the box.*/
+                
+            }
+            .Search-bar::placeholder /*<-- This psuedoclass is how you target the placeholder of an input text box. Syntax: <<input class id>>::placeholder*/
+            {   
+                font-size: 16px;
+
+
+            }
+            .search-button
+            {   height: 40px;
+                width: 60px;
+                background-color: rgb(240,240,240);
+              border-width: 1px;
+              border-style: solid;
+              border-color: rgb(192,192,192);
+              margin-left: -1px;/*<-- Doing a -<<pixel #>> allows us to pull an object to the left opposed to pushing the object to the right.*/
+              margin-right: 4px;
+              position: relative;/*<-- This is here to create the hover effect that we see when we hover over the search button. Refer to the position absolute and relative notes for more information.*/  
+            }
+            .voice-search-button
+            {
+                height: 40px;
+                width: 40px;
+                border-radius: 20px;
+                border: none;/*<-- This allows us to remove the border. ALSO, if you want to create a circle, ensure that the height=width and the border radius is half the height or the width.*/
+                background-color: rgb(245,245,245);
+            }
+            .search-button, .voice-search-button, .upload-icon-container, .youtube-apps-container, .notifications-icon-container
+            {   display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+            .search-button .tooltip, .voice-search-button .tooltip, .upload-icon-container .tooltip, .youtube-apps-container .tooltip, .notifications-icon-container .tooltip
+            {   
+                background-color: gray;
+                color: white;/*<-- Sets the textutal color*/
+                position: absolute;
+                bottom: 10px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                padding-left: 8px;
+                padding-right: 8px;
+                /* padding: 4px 4px 8px 8px; */
+                border-radius: 2px;
+                font-size: 12px;
+                bottom: -30px;
+                /*From this point forward in this body, we learned how to create the hover effect that details the purpose of an element.*/
+                opacity: 0;
+                transition: opacity 0.15s;
+                pointer-events: none;/*<-- This is responsible for the tool tip being invisible UNTIL the user hovers over the search button.*/
+                white-space: nowrap;/*<-- This prevents text from wrapping around.*/
+            }
+            .search-button:hover .tooltip, .voice-search-button:hover .tooltip, .upload-icon-container:hover .tooltip, .youtube-apps-container:hover .tooltip, .notifications-icon-container:hover .tooltip/*<-- This pair of css selectors means that body of the pair only works when the user hovers over the search button and ONLY applies to the tooltip css psuedoclass.*/
+            {
+                opacity: 1;
+            }
+            .search-icon /*<-- This is used to modify the size of the magnifying glass icon*/   
+            { height: 25px;  
+
+            }
+            
+            .voice-search-icon /*<-- This is used to modify the microphone icon*/
+            {   display: flex;
+                height: 24px;
+            }
+            .voice-search-icon .tooltip
+            {
+
+            }
+            .upload-icon
+            {
+                height: 24px;
+            }
+            .youtube-apps-icon
+            {
+                height: 24px;
+            }
+            .notifications-icon
+            {
+                height: 24px;
+            }
+            .notifications-icon-container
+            {
+                position: relative;/*If you read all of the notes and comprehend them, you know why this is here.*/
+            }
+            .notifications-count
+            {   
+                font-size: 11px;
+                padding-left: 5px;
+                padding-right: 5px;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                position: absolute;
+                top: -2px;/*Assigning negative pixels values to the top, right, bottom, or left allows you to put elements beyond the boundaries of the page. This is how I got the notification number to be above the bell.*/
+                right: -5px;
+                background-color: rgb(200,0,0);
+                color: white;
+                border-radius: 10px; 
+                
+            }
+            .current-user-picture
+            {
+                height: 32px;
+                border-radius: 16px;
+            }
+            
