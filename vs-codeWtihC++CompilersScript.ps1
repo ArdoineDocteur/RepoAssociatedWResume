@@ -40,7 +40,7 @@ function dl-vscode
       & '~\OneDrive\desktop\Google Chrome.lnk' https://github.com/brechtsanders/winlibs_mingw/releases/download/13.1.0-16.0.4-11.0.0-ucrt-r4/winlibs-x86_64-posix-seh-gcc-13.1.0-llvm-16.0.4-mingw-w64ucrt-11.0.0-r4.zip
       sleep -seconds 90
       cd ~/downloads;tar -xkf winlibs-x86_64-posix-seh-gcc-13.1.0-llvm-16.0.4-mingw-w64ucrt-11.0.0-r4.zip
-      cd winwinlibs-x86_64-posix-seh-gcc-13.1.0-llvm-16.0.4-mingw-w64ucrt-11.0.0-r4; mv mingw64 /Windows/System32 #<-- This is used to put the c++ compilers in a certain directory which will be added to the environment variables for the computer.
+      cd winlibs-x86_64-posix-seh-gcc-13.1.0-llvm-16.0.4-mingw-w64ucrt-11.0.0-r4; mv mingw64 /Windows/System32 #<-- This is used to put the c++ compilers in a certain directory which will be added to the environment variables for the computer.
       $checker=$env:Path -split ";"
       for($i=0;$i -lt $checker.Length;$i++)
       { if($checker[$i] -eq "C:\System32\cmd.exe")
@@ -84,6 +84,7 @@ function dl-vscode
       }
       
       echo "Extension and the neccessary compilers were installed as requested."
+      echo "The neccessary JSON files for your c++ compilers are in the webpage in front of you."
       & '~\OneDrive\Desktop\Google Chrome.lnk' https://drive.google.com/drive/folders/1C5YiAqTlOrBZZ0m5s0GkC6rJ3u7xeNmP
               
 
