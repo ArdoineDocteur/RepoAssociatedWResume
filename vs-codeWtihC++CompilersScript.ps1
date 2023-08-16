@@ -85,7 +85,7 @@ function dl-vscode
       
       echo "Extension and the neccessary compilers were installed as requested."
       echo "The neccessary JSON files for your c++ compilers are in the webpage in front of you."
-      & '~\OneDrive\Desktop\Google Chrome.lnk' https://drive.google.com/drive/folders/1C5YiAqTlOrBZZ0m5s0GkC6rJ3u7xeNmP
+      & '~\OneDrive\Desktop\Google Chrome.lnk' https://drive.google.com/drive/folders/1IbUjwO7bRHVf0pKgsyJ8b0kBn874WQz0
               
 
     } 
