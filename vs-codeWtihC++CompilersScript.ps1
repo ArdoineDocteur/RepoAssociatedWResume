@@ -49,8 +49,6 @@ function dl-vscode
         }
         elseif($checker[$i] -ne "C:\System32\cmd.exe" -and $i -eq $checker.Length-1)
         { 
-        #$checker.Add("C:\Windows\System32\cmd.exe")
-        #Alternate way: 
         echo "You need this path in your env:path variables. It is clipped to your clipboard."
         $e=(~)
         $user=pwd ~;
@@ -67,8 +65,7 @@ function dl-vscode
         }
         elseif($checker[$i] -ne "C:\Windows\System32\mingw64\bin" -and $i -eq $checker.Length-1)
         {
-          #$checker.Add("C:\Windows\System32\mingw64\bin")
-          #Alternate way: 
+          
           echo " Steps to take for modifying environment variables:
         1) Double-Click Path under 'User variables for <<Your username>>'
         2) Press 'New'
