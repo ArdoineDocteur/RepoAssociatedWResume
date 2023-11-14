@@ -49,8 +49,6 @@ function dl-vscode
         }
         elseif($checker[$i] -ne "C:\System32\cmd.exe" -and $i -eq $checker.Length-1)
         { 
-        #$checker.Add("C:\Windows\System32\cmd.exe")
-        #Alternate way: 
         echo "You need this path in your env:path variables. It is clipped to your clipboard."
         $e=(~)
         $user=pwd ~;
@@ -66,9 +64,7 @@ function dl-vscode
         $i=0;#<-- This is used to reset the loop.
         }
         elseif($checker[$i] -ne "C:\Windows\System32\mingw64\bin" -and $i -eq $checker.Length-1)
-        {
-          #$checker.Add("C:\Windows\System32\mingw64\bin")
-          #Alternate way: 
+        {          
           echo " Steps to take for modifying environment variables:
         1) Double-Click Path under 'User variables for <<Your username>>'
         2) Press 'New'
@@ -85,7 +81,8 @@ function dl-vscode
       
       echo "Extension and the neccessary compilers were installed as requested."
       echo "The neccessary JSON files for your c++ compilers are in the webpage in front of you."
-      & '~\OneDrive\Desktop\Google Chrome.lnk' https://drive.google.com/drive/folders/1C5YiAqTlOrBZZ0m5s0GkC6rJ3u7xeNmP
+      & '~\OneDrive\Desktop\Google Chrome.lnk' https://drive.google.com/drive/folders/1IbUjwO7bRHVf0pKgsyJ8b0kBn874WQz0
+
               
 
     } 
@@ -96,5 +93,5 @@ function dl-vscode
 
   
    
-  
+
 }
