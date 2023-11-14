@@ -1,0 +1,44 @@
+/*Extra Notes
+-The psuedoclass identifier's technical name is called the css selector. In css, we can combine css selectors together, which we did a few
+lectures ago by separating the selectors using COMMAS. When space-delimiting your css selectors, you can target a div class and then target a specific
+element from that div class. For an example, refer to the code below sidebar-link:hover.
+-To center elements vertically, it is wise to use flexboxes.
+*/
+/*THe purpose of this file is to style the sidebar.*/
+.sidebar
+{   position: fixed;/*<-- Makes the element "stick"*/
+    left: 0;
+    bottom: 0;
+    top: 55px;/*<-- NOTE: To prevent a div from overlapping onto another, set the top's value to that element/div's height.*/
+    background-color: white;
+    width: 72px;
+    z-index: 200;/*<-- Remember that this is used to put elements more "upfront". This was done to display the sidebar in front of the header.*/
+    padding-top: 5px;
+}
+.sidebar-link
+{   /*The code here is responsbile for the effects for hovering over the options in the sidebar and more*/
+    height: 74px;
+    /* margin-bottom: 1px; */
+    display: flex;/*<-- This and the code below in this body are used to center all the divs vertically and HORIZONTALLY.*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;/*<-- This is used to display elements vertically. Replacing column with row displays elements horizontally(which is the default selection).*/
+    /*NOTE: When flex-direction has the column value, the align-items and justify-content properties switch roles opposed to when flex-direction is its default value(row).*/
+    cursor: pointer;/*Remember that the cursor css property allows us to see a pointer when we hover over the element.*/
+}
+.sidebar-link:hover /*<-- If you remember in the earlier lectures, psuedoclass id: hover allows you to add features when the user hovers over an element in html.*/
+{   background-color: lightgray;
+
+
+}
+.sidebar-link img
+{   height: 24px;
+    align-items: center;
+    margin-bottom: 4px;
+
+}
+.sidebar-link div /*<-- This is used to target the divs inside the sidebar-link div*/
+{   
+    font-size: 10px;
+
+}
