@@ -1,21 +1,22 @@
-import cmds as cm, re, exceptions #<-- Example of importing files in python. In contrast to c++, importing files don't req the file extension .py . We simply put the identifier and that is it.
-correctUI=re.compile("\w+(\s-\w{1,3})*")
-reforCSS=re.compile("\.\w+\n*{\s*(\w+(-\w+)*)+:\s*(\D+|\d+px)+;\n*}")
+import cmds as cm, re, exceptions 
+correctUI=re.compile("\w+(\s-\w{1,3})*")#<-- Regex exp responsible for ensuring that the user inputs data in a argument space-delimited format.
+reforCSS=re.compile("\.\w+\n*{\s*(\w+(-\w+)*)+:\s*(\D+|\d+px)+;\n*}")#<-- Regex exp responsible for ensuring css code is available in the css file.
 def IsCmd(inp: str) -> bool:
     a: bool=False
-    validCmdlets=["cls","curr","exit","cssManip"]#<-- Through various updates, I will update the cmdlets here.
+    validCmdlets=["curr","exit","cssManip"]
     for i in validCmdlets:
         if(inp.split(" ")[0] == i):
           return True
     return False
 def allCmds():
-    return "curr\ncls\nexit\ncssManip"
+    return "curr\nexit\ncssManip"
 def cssIDFinder(filePath: str):
     container = []
     counter = 0
     info = filePath
     if(info.__contains__(".") and info.__contains__("{")):
         for i in info:
+                # Two conditionals responsible for providing the indexes for accessing the css class id.
                 if(i == "."):
                     container.append(counter+1)
                 elif(i == "{"):
@@ -24,7 +25,7 @@ def cssIDFinder(filePath: str):
     return container
 
 def curlyBraceFinder(filePath: str, isFP = True) -> list:
-    container=[] #<-- Used to contain the index where the first curly brace is and the last curly brace is. PN: For future purposes, in the event that you needa work with multiple css classes, I believe the . would be a great start for a delimiter for separating all the css classes in a .css file.
+    container=[] #<-- Used to contain the index where the first curly brace is and the last curly brace is.
     counter = 0
     if(isFP == True):#<-- Boolean used for allowing regular string sequences AND files themselves being read in which is very convienient.
         try:
@@ -54,7 +55,7 @@ def curlyBraceFinder(filePath: str, isFP = True) -> list:
             counter+=1
         container.append(0) if frontBrace == False else container
         container.append(len(filePath)-1) if backBrace == False else container
-    print("No css code found!") if len(container) == 1 else print("")#<-- Uses the size of the counter to see if their is proper css code in css file. If there is, the length of the container should ALWAYS be 2.
+    print("No css code found!") if len(container) == 1 else print("")#<-- Uses the size of the counter to see if there is proper css code in css file. If there is, the length of the container should ALWAYS be at least 2.
     return container#<-- Returns list with two whole numbers resp for providing the indexes where each text start whilst excluding the curly braces.    
 def userInpParser(uI: str="",dyn=cm.curr(), dyn1=cm.cssManip()):
     #The purpose of this method is for parsing through user input and running the neccessary commands as requested.
@@ -75,7 +76,7 @@ def userInpParser(uI: str="",dyn=cm.curr(), dyn1=cm.cssManip()):
             print(error)
             return
         cmdlets={"cls": 0,"exit": 0, "curr": dyn, "cssManip": dyn1}
-        if(uIsplit[0]=="exit" or uIsplit[0]=="cls"):
+        if(uIsplit[0]=="exit"):
         #Here, I will run the exit object which will exit the terminal.
             return 0
         try:
@@ -115,7 +116,7 @@ def userInpParser(uI: str="",dyn=cm.curr(), dyn1=cm.cssManip()):
                 print(error)
                 return
             if(fileTwoRead.split('.')[1]=="css"):
-                try: #<-- For some reason, the content of the file will not print.[fixed issue, it turns out one condition was true over the other.]
+                try:
                     filepath=cmdlets.get(uIsplit[0]).getFilePath()
                     file=open(filepath)
                     content=file.read()
@@ -123,12 +124,12 @@ def userInpParser(uI: str="",dyn=cm.curr(), dyn1=cm.cssManip()):
                     dyn1.setNumOfCSS(len(allCSSClasses))#<-- Responsible for ensuring that there is enough space to hold ALL of the css classes in the file given.
                     allCSSClasses: str = str(content).split("}")[:dyn1.numOfCSS-1]#<-- This will be an array that holds all of the css classes inside of a file.
                     # After establishing this, I will modify the body of the if statement slightly.
-                    #Here I will split the .css file into matches and then split the matches using ';'. Thinking about assigning the array of splits to some property in the curr object.
+                    #Here I split the .css file into matches and then split the matches using ';'.
                     test2dstey: list=[]
                     if(reforCSS.match(content)!=None):
                         print("Doing the matches...")
                         for i in range(len(allCSSClasses)):
-                            test2dstey.append(allCSSClasses[i][curlyBraceFinder(allCSSClasses[i], False)[0]:curlyBraceFinder(allCSSClasses[i], False)[1]].split(";"))
+                            test2dstey.append(allCSSClasses[i][curlyBraceFinder(allCSSClasses[i], False)[0]:curlyBraceFinder(allCSSClasses[i], False)[1]].split(";"))#<-- Stores the css statements in each class.
                             dyn1.nameStore.append(allCSSClasses[i][cssIDFinder(allCSSClasses[i])[0]:cssIDFinder(allCSSClasses[i])[1]])#<-- Stores the original css identifiers.
                         cmdlets.get("cssManip").setArrayOfInfo(test2dstey)#<-- Gives user the ability to modify ALL the css classes and their respective statements in the file they passed in.
                         for i in range(len(test2dstey)):#<-- Resp for printing out each css class separately.
@@ -152,11 +153,11 @@ def userInpParser(uI: str="",dyn=cm.curr(), dyn1=cm.cssManip()):
                         print(error)
                         return
                 print("start")
-                classSelect=int(input(f"Pass in the css class number that you want to edit ranged from 0 to {cmdlets.get('cssManip').getNumOfCSS()-1}: "))#<-- Self-explanatory. IMPT: In future, I may implement something that allows the user to enter the name of the css class to access it opposed to writing a number to target an index.
+                classSelect=int(input(f"Pass in the css class number that you want to edit ranged from 0 to {cmdlets.get('cssManip').getNumOfCSS()-1}: "))
                 #Here, I will call the function responsible for returning the css statement @ a particular index.
                 if(len(uIsplit)>=4 and (int(uIsplit[2])>=0 and int(uIsplit[2]) < len(cmdlets.get("cssManip").getArrayOfInfo(False,False,classSelect)))):
                     # Here, I will allow user to modify a statement @ the index given.
-                    if(uIsplit[3] == "-modify" and len(uIsplit[4]) != 0): #<-- branching statement works as intended. Operations within branching statement works as intended as well.
+                    if(uIsplit[3] == "-modify" and len(uIsplit[4]) != 0):
                         print(cmdlets.get("cssManip").modifyStatement(int(uIsplit[2]), uIsplit[4], True,classSelect))
                 elif((int(uIsplit[2])>=0 and int(uIsplit[2]) < len(cmdlets.get("cssManip").getArrayOfInfo(False,False,classSelect))) and len(uIsplit[2]) != 0):
                     print(cmdlets.get("cssManip").getArrayOfInfo(False,False,classSelect)[int(uIsplit[2])])
@@ -171,7 +172,7 @@ def userInpParser(uI: str="",dyn=cm.curr(), dyn1=cm.cssManip()):
                     print("Incorrect format")
                     return
         elif(uIsplit[0] == "cssManip" and uIsplit[1]=="-p"):
-            classSelect=int(input(f"Pass in the css class number that you want to edit ranged from 0 to {cmdlets.get('cssManip').getNumOfCSS()-1}: "))#<-- Self-explanatory. IMPT: In future, I may implement something that allows the user to enter the name of the css class to access it opposed to writing a number to target an index.
+            classSelect=int(input(f"Pass in the css class number that you want to edit ranged from 0 to {cmdlets.get('cssManip').getNumOfCSS()-1}: "))
             cmdlets.get("cssManip").getArrayOfInfo(True, False, classSelect)
         elif(uIsplit[0] == "cssManip" and uIsplit[1] == "-sub"):
             print("Beginning process of uploading copy of file with modified css code")
@@ -179,17 +180,16 @@ def userInpParser(uI: str="",dyn=cm.curr(), dyn1=cm.cssManip()):
             if(userResp == 1):
                 print("Continuing process")
                 fileName: str = input("Enter your desired file name for this entry:[NOTE: You don't have to insert a file extension for your css file!] ")
-                ent = 0; arrOfNames: str = dyn1.nameStore#<-- IMPT: When you come back, make sure that in curr sub command, that you store the css class ids in some array member so that you can use them as css selectors in the new version of the file 
-                # if the user requests it(complete).
+                ent = 0; arrOfNames: str = dyn1.nameStore#<-- 
                 nameChange: int = int(input("Would you like to change the names of your css class ids? 1) Yes 2) No: "))
                 if(nameChange == 1):
 
                     while( ent < (dyn1.numOfCSS-1)):#<-- -1 is there to compensate for inaccuracy in amt of css classes on a file.
-                        cssClassId: str = input(f"Great! Now enter the name for your css class #{ent}: ")#<-- In future, if user established multiple, this prompt may be in some for loop.
-                        arrOfNames.append(cssClassId)
+                        cssClassId: str = input(f"Great! Now enter the name for your css class #{ent}: ")
+                        arrOfNames[ent] = cssClassId
                         ent+=1
-                elif(nameChange == 2):
-                    print("Request Granted!")#<-- May change later.
+                elif(nameChange == 2):#<-- If this is the case, the original names are not modified.
+                    print("Request Granted!")
                 #Below I will implement the file writer:
                 try: 
                     filepath=f"./{fileName}.css"#<-- May cause an error if user enters something that doesn't make sense.
