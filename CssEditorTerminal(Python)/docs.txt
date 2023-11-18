@@ -1,0 +1,31 @@
+Purpose: The purpose of this document is to write my first draft for the documentation for those who want to test out my program outta curiosity. At this point, I believe it
+is important to figure out the format I want to approach when writing out my commands, and their respective command args.
+Theoretical Format for my docs file: -->
+                                            Documentation
+Command: curr
+- Purpose of command --> The purpose of this command is setting the filepath that references the filepath of your 
+desired css file you would like to modify.
+- Cmdlets:
+a) -mod = Takes in one string argument referencing the filepath that has the css file of your choice.
+b) -p = Takes in 0 arguments. Prints out the current filepath that you have selected that references your css file. It is assigned as "Default" 
+by default. 
+c) -sub = Takes in 0 arguments. Responsible for submitting the filepath to the system so that you can modify the css code using the cssManip command.
+- Examples[The format is for the examples below are <<cmdlet>> <<space-delimited args>> => <<result of the arguments passed into the terminal>>]
+1) curr -mod <<filepath>> => Sets the current filepath being referenced from "Default" to <<filepath>> 
+2) curr -sub => Sends the file stored in the curr command/object and passes it to the cssManip command.
+
+Command: cssManip
+- Purpose of command --> The purpose of this command is modifying the css code from your submitted filepath from the curr command.
+- Cmdlets:
+a) -ret = Takes in one integer argument. Returns the css statement at that index via splitting the semicolons to declare each statement
+in the css class.
+b) -p = Takes in 0 arguments. Returns the array of css statements in the selected css class on your css file.
+c) -sub = Takes in 0 arguments. Writes/Prints out all of the css statements in the selected css class on a css file of your choice.
+d) -modify = Used as arguments for the -ret <<index>> cmdlet sequence. It takes in a css statement as an argument. Responsible for modifying css statements at
+certain indexes. If the css statement passed in isn't formatted correctly, user is prompted to enter each part of the pair[the property and value] and it is added to the
+modified version of the file.
+- Examples
+1) cssManip -ret 0 => Prompts user requesting which css class to access, and then once user inputs a valid index, it prints the css statement @ index 0 inside of the css class accessed via the 
+user's entry via the prompt.[May reword this in future]
+2) cssManip -ret 1 -modify <<css statement>> => Prompts user requesting which css class to access, and then once user inputs a valid index, it modifies the css statement at index 1 by replacing it with
+<<css statement>>.
