@@ -1,9 +1,9 @@
-# THis will be a module-isk file that contains the commands for my terminal program.
+# THis is a module-isk file that contains the commands for my terminal program.
 import exceptions as exc
 class curr:
     def __init__(self):
         self.fP: str="Default"
-        # self.fileContent#<-- Eventually, will use this to access the content of the file directly.
+        # self.fileContent
     def getFilePath(self):
         return self.fP
     def setFilePath(self, newFP):
@@ -19,7 +19,7 @@ class cssManip:
     count = 0
     def __init__(self, numofclasses = 1):
         self.currFile="Empty"
-        self.arrayOfInfo=[[]]# <-- Changing Identifier later on.
+        self.arrayOfInfo=[[]]#<-- Stores css classes and their respective statements from a css file.
         self.nameStore = []#<-- Stores the css ids from the read in file from the curr command.
         k = 0
         while(k < numofclasses):
@@ -41,7 +41,7 @@ class cssManip:
     def setCurrFile(self, newCurrFile):
         #Needa have an if statement to ensure that currFile exists
         self.currFile=newCurrFile
-    #@ This point, I will create methods responsible for printing the contents of the currFile, modifying the contents of the currFile, and accessing certain css statements in the curr file.
+    #@ Below in the body of this class consists of methods responsible for printing the contents of the currFile, modifying the contents of the currFile, and accessing certain css statements in the currFile property.
     def outputCurrFile(self) -> None:
         try:
             file=open(self.currFile)
@@ -76,13 +76,12 @@ class cssManip:
             print("css property-value pair replaced")
             replacement_css_statement = f"{cssProp} : {cssVal}"
         # searcher=self.arrayOfInfo
-        searcher = self.arrayOfInfo[classNum]#<-- Self-explanatory.
+        searcher = self.arrayOfInfo[classNum]#<-- accesses the css class to modify the statement in that particular class.
         searcher[index]=replacement_css_statement
         if(retrieve == True):
             return searcher[index]
     def outputModdedFile(self, idCC: list, s):
-        # idCC is used for user to name css class in their css file.
-        # IMPT: For new version, I will give user opportunity to name each css class in a file before printing it out and store their results in an array.
+        # idCC is used for user to name their css classes in their css file.
         pusher=self.getArrayOfInfo(False,True)#<-- Returns the entire 2-d array consisting of all css classes and their respective css statements in the passed in css file.
         for j in range(len(pusher)):
             for k in range(len(pusher[j])):
@@ -90,6 +89,6 @@ class cssManip:
                 if(k == 0 and j < len(idCC)):#<-- conditional responsible for assigning new names or modifying names of css classes in a file.
                     print("."+f"{idCC[j]}"+"{"+pusher[j][k], file = s)
                 elif(k == len(pusher[j])-1):
-                    print("\n}"+str(pusher[j][k]).split(";")[1], file = s)#<-- Prevents semicolon from being appended on back braces[ } ]
+                    print("\n}"+str(pusher[j][k]).split(";")[1], file = s)#<-- Prevents semicolon from being appended on back braces[ } ] when writing to file.
                 else:
                     print(pusher[j][k], file = s)    
