@@ -2,6 +2,9 @@ Purpose: The purpose of this document is to write my first draft for the documen
 is important to figure out the format I want to approach when writing out my commands, and their respective command args.
 Theoretical Format for my docs file: -->
                                             Documentation
+Command: exit
+- Purpose of command --> THe purpose of the command is exiting the shell terminal.
+- Command has no cmdlets, and takes in 0 arguments.
 Command: curr
 - Purpose of command --> The purpose of this command is setting the filepath that references the filepath of your 
 desired css file you would like to modify.
