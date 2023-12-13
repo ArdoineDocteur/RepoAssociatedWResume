@@ -115,7 +115,8 @@ def userInpParser(uI: str="",dyn=cm.curr(), dyn1=cm.cssManip()):
             except exceptions.IncorrectUserInputException as error:
                 print(error)
                 return
-            if(fileTwoRead.split('.')[1]=="css"):
+            # If statement below allows user to use access any css file from the current system the program is executed on.
+            if(str(fileTwoRead.split("/")[len(fileTwoRead.split("/")) - 1]).split('.')[1]=="css"):
                 try:
                     filepath=cmdlets.get(uIsplit[0]).getFilePath()
                     file=open(filepath)
