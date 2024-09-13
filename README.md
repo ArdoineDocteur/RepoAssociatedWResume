@@ -45,10 +45,9 @@ into files, and WILL create a makefile for running the program as well.
 - Make sure to explain the coding logic effectively using a decent amount of comments.
 - Going to make a simple makefile for the project as well.
 - IMPT: May have to consider a case where user inputs another data type other than a number. Will use a try and catch block for that.
-
-
 ```
-
+#### [Chore App : MERN](https://github.com/Darnell-Chen/SMS-RemindR)
+- Brief Description: SMS RemindR is a web app that allows you to schedule notifications via SMS, Email, and Discord. Built using the MERN stack, it features both a backend and frontend framework to ensure seamless operation and user experience.
 ---
 
 ### School Projects 
