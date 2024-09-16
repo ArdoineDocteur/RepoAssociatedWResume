@@ -50,8 +50,6 @@ into files, and WILL create a makefile for running the program as well.
 #### [Chore App : MERN](https://github.com/Darnell-Chen/SMS-RemindR)
 - Brief Description: SMS RemindR is a web app that allows you to schedule notifications via SMS, Email, and Discord. Built using the MERN stack, it features both a backend and frontend framework to ensure seamless operation and user experience.
 
-<<<<<<< HEAD
-=======
 #### [CssEditorTerminal : Python](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/CssEditorTerminal(Python))
 
 Purpose: Create a Terminal System for modifying the appearance of a HTML file.
@@ -94,7 +92,6 @@ into files, and WILL create a makefile for running the program as well.
 
 
 ```
->>>>>>> 4b1d4a29260b690ffc0c86bac6990c3ef83b35a5
 
 #### [Grocery Sales Web Scraper: Python][IP]
 
