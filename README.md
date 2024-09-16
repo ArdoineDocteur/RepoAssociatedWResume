@@ -51,26 +51,6 @@ into files, and WILL create a makefile for running the program as well.
 - Brief Description: SMS RemindR is a web app that allows you to schedule notifications via SMS, Email, and Discord. Built using the MERN stack, it features both a backend and frontend framework to ensure seamless operation and user experience.
 
 
-#### [Guessing Game : C++](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/GuessingGame(c%2B%2B))
-
-Purpose: Created a guessing game using dynamic memory allocation through the use of unique pointers using C++
-```txt
-Abstract Representation of vision for project
-
-Subobjectives:
-- 1) Create a user environment that directly tells the user the req instructions
-- 2) Use an unique pointer array to output the user's entries.
-Ideas:
-- Will make unique pointer array of type int.
-- Initial plan is to write everything in main method. After the logic is implemented correctly, I will split the code
-into files, and WILL create a makefile for running the program as well.
-- Make sure to explain the coding logic effectively using a decent amount of comments.
-- Going to make a simple makefile for the project as well.
-- IMPT: May have to consider a case where user inputs another data type other than a number. Will use a try and catch block for that.
-
-
-```
-
 #### [Grocery Sales Web Scraper: Python][IP]
 
 Purpose: Creating a web scraping project using Python that can help people save money when they go to the grocery store. This project benefits those who are regular IGA Grocery Shoppers.
