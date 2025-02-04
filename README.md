@@ -7,10 +7,10 @@ IP = In Progress
 
 ### Personal Projects
 
-#### [Rock Paper Scissors Game: Javascript, HTML, CSS]()
+#### [Rock Paper Scissors Game: Javascript, HTML, CSS](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/RockPaperScissors\(Javascript%2C%20HTML%2C%20CSS\))
 Purpose: Create a Rock Paper Scissors Game using vanilla javascript, HTML, and CSS. 
 
-#### [ToDoList: Javascript, HTML, CSS]()
+#### [ToDoList: Javascript, HTML, CSS](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/ToDoList\(Javascript%2C%20HTML%2C%20CSS\))
 Purpose: Create a simple To-do List application using vanilla javascript, HTML, and CSS. 
 #### [CssEditorTerminal : Python](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/CssEditorTerminal(Python))
 
