@@ -1,0 +1,94 @@
+<!--The purpose of this code is to use javascript's booleans to create a rock paper scissors game.
+NOTE: The rock button is bugged but everything else works fine.
+-On our functions lecture, we created functions to clean up our code.
+-One thing to know about functions is the idea of variable usage and scopes apply in
+javascript as well. Variables that can be accessed anywhere are called global variables.
+-Another thing to know is that to create void functions/methods, just omit the return statement
+as you would in any other program.
+-From the objects lecture, we used the localstorage integrated object to permanently save certain data in
+our webpage. 
+-From the DOM(Document Object Model) lecture, we used the document object in Javascript to update our Rock Paper Scissors 
+game, and added other html elements to improve the UI.
+-From the HTML,CSS, Javascript together lecture, we added css on our buttons to add icons that represent rock, paper, and 
+scissors respectively.
+-In this lecture, we also talked about the process of separating our code into separate files. One thing to know
+is that the file extension for javascript code files is .js. To link your javascript files, you use the src html attribute
+on the html script tag. Next, you simply enter the filepath in the attribute value. Also, as you should know from the
+html and css lecture, you can creates css files and link them using the html link tag accompanied by the href html attribute.
+-MOST IMPORTANTLY, when creating webpages/websites, it is wise to code what you can on one file, AND then @ the end organize
+it in their neccessary files, and link them using the html attribute src with the script tag(for js files) and the link tag(for css files)
+respectively.
+-In the Advanced Functions lecture, we implemented an auto play button. The button works as intended, but the results are not printing
+out they are supposed to. Whenever you are reviewing this material, make an attempt to fix this issue.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="./rockPaperScissors.css"><!--Here we use this line of code to link our css file. For more information, refer to the
+Learning HTML folder-->
+</head>
+
+<body>
+<p style="font-size: 30px; font-weight: bold;">Rock Paper Scissors</p>
+<button class="user-choices" onclick="
+userChoice='rock';
+const randomNumber=Math.random()//<-- This line of code generates a random number between 0 and 1. Using this, we use the idea that there are 3 choices and the random number occurs between 0 and 1. THis idea is used to create the boolean expressions needed for our program.
+// pickComputerMove();
+playGame(userChoice,pickComputerMove());
+winner(userChoice,computerChoice,result);
+">
+<img src="Icons4Projects/rock-emoji.png" class="rock-size">
+</button>
+<button class="user-choices" onclick="
+userChoice='Paper';
+
+// randomNumber=Math.random()//<-- This line of code generates a random number between 0 and 1. Using this, we use the idea that there are 3 choices and the random number occurs between 0 and 1. THis idea is used to create the boolean expressions needed for our program.
+playGame(userChoice,pickComputerMove());
+winner(userChoice,computerChoice,result);
+">Paper
+<img class="paper-size" src="Icons4Projects/paper-emoji.png">
+</button>
+<button class="user-choices" onclick="
+userChoice='Scissors'
+playGame(userChoice,pickComputerMove());
+winner(userChoice,computerChoice,result);
+">
+<img src="Icons4Projects/scissors-emoji.png" class="scissors-size">
+</button>
+<p class="game-result" style="color: white;">You haven't played any games in this session yet</p>
+<button class="res-button" onclick="permScore.userScore=0;permScore.computerScore=0;permScore.ties=0;
+//In this reset button, I made the button interactive and transparent so that the user knows when the score is reset.
+let modify=document.querySelector('.res-button');
+if(modify.innerText==='Reset Scores')
+{   modify.innerText='Scores have been Reset';
+
+}
+else if(modify.innerText!=='Reset Scores')
+{
+    modify.innerText='Reset Scores';
+}
+localStorage.removeItem('Score');//<-- This is used to remove the item from local storage. The syntax for doing this is: localStorage.removeItem(<<key id from setItem localStorage method>>).
+">Reset Scores</button>
+<button style="cursor: pointer;" class="res-button auto-play-button" onclick="
+// console.log(text);
+text=document.querySelector('.auto-play-button').innerText='Auto Play is Currently on';
+if(count%2==0)
+{   text=document.querySelector('.auto-play-button').innerText='Auto Play is Currently on';
+    autoPlay(true);
+}
+else
+{
+    text=document.querySelector('.auto-play-button').innerText='Auto Play';
+    autoPlay(false)
+}
+count++;
+console.log(text);
+// setInterval(autoPlay());
+// autoPlay();
+">Auto Play</button>
+<p>Click here to see the final version of the project</p>
+<script src="./rock-paper-scissorsJS.js"></script><!--Here, we use the html src attribute to link the javascript file to the script html tag to use it inside
+of this html file. It uses src the same way the html img tag uses src.-->
+
+</body>
+</html>

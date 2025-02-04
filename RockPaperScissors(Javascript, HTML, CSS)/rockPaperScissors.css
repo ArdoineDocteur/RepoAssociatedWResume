@@ -1,0 +1,52 @@
+
+body
+{
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-family: Arial;
+}
+.user-choices
+{
+    border-color: white;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 90px;
+    align-items: center;
+    border-radius: 250px;
+    margin-right: 10px;
+    cursor: pointer;
+    
+}
+
+.paper-size
+{   width: 150px;
+    height: 150px;
+    margin-left: -20px;
+    padding: 50px;
+}
+.rock-size
+{
+    width: 150px;
+    height: 150px;
+    margin-left: -20px;
+    padding: 50px;
+}
+.scissors-size
+{
+    width: 150px;
+    height: 150px;
+    margin-left: -25px;
+    padding: 50px;
+}
+.res-button
+{   padding: 20px 10px;
+    border-radius: 200px;
+    background-color: gray;
+    font-weight: bold;
+}
+.res-button-effects
+{   
+    color: white;
+    font-weight: bold;
+}
+

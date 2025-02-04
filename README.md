@@ -7,6 +7,11 @@ IP = In Progress
 
 ### Personal Projects
 
+#### [Rock Paper Scissors Game: Javascript, HTML, CSS]()
+Purpose: Create a Rock Paper Scissors Game using vanilla javascript, HTML, and CSS. 
+
+#### [ToDoList: Javascript, HTML, CSS]()
+Purpose: Create a simple To-do List application using vanilla javascript, HTML, and CSS. 
 #### [CssEditorTerminal : Python](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/CssEditorTerminal(Python))
 
 Purpose: Create a Terminal System for modifying the appearance of a HTML file.

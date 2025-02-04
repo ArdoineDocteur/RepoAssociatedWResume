@@ -1,0 +1,39 @@
+
+.js-user-input0,.js-user-input1,.js-due-date-UI0,.js-due-date-UI1,.add-button,.delete-button
+{   padding: 10px;
+    
+}
+.delete-button
+{
+    background-color: rgb(166, 21, 21);
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.add-button
+{   background-color: green;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    
+
+}
+.todo-grid, .todo-input-grid
+{   /*In the body of this pseudoclass, we used the css grid display to format the output of our tasks' information. FOr more 
+    information on css grid, refer to the learning HTML folder.    */
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;/*<-- We use this to vertically align our items.*/
+
+}
+.todo-input-grid
+{
+    margin-bottom: 10px;
+    align-items: stretch;
+}
+
+

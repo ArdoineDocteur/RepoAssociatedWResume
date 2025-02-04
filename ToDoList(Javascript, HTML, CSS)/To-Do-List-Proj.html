@@ -1,0 +1,40 @@
+<!--More Notes about Arrays and Loops in Javascript
+-In this project, we created an array to store the tasks, and used the text box to get the data to store inside of the 
+task object.
+-Also, we used loops to add all of the tasks that a user adds, and display them on the screen.
+-With experience learning, I learned that you can create custom objects that contain multiple modifiable properties like you
+would create them in java or other langauges. This is done by creating a function, parameterizing its constructors with the
+property ids that you want and then creating the instance variables using the self-referential pointer aka the 'this' keyword.
+Once this is done, you can make instances of your custom object, as you would in java, by using the 'new' keyword. Syntax for
+making a new instance of your custom object in javascript: let <<new inst id>>= new <<custom object id>>(<<optional property entries for params>>);
+Refer to the code below for two examples involving this.
+-As of 6/20/23, the fundamental part of the project is finished. If you would like, you can modify the css code to give the project
+more unity.
+-NOTE: In the advanced functions lecture, we added a keydown feature which allows the user to add tasks using the enter key.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>TODO List</title>
+<link rel="stylesheet" href="./todolist.css">
+</head>
+<body>
+<p>Todo List Practice 1</p>
+<div class="todo-input-grid">
+<input type="text" placeholder="Task Name: " class="js-user-input0"><!--Remember that html's input tag accompanied by the html attribute type="text" allows us to create text boxes to use user input.-->
+<input type="date" class="js-due-date-UI0"><!--This line of code is responsible for creating a text box for setting a date. To do this, you must set the type attribute to "date".-->
+<button class="add-button js-add-button" onclick="addTasks(0); displayTasks();//<-- Here, we used the querySelector func from the document object to derive input from the html input tag">Add</button>
+
+
+</div>
+<p>Todo List Practice 2</p>
+<div class="todo-input-grid">
+<input type="text" placeholder="Task Name: " class="js-user-input1">
+<input type="date" class="js-due-date-UI1"><!--This line of code is responsible for creating a text box for setting a date. To do this, you must set the type attribute to "date".-->
+<button class="add-button" onclick="addTasks(1); displayTasks();">Add</button>
+</div>
+<div style="padding: 10px 6px;" class="js-user-output todo-grid">Begin Entering Your Entries Here</div><!--Here we use a div to create space for displaying the user's entries-->
+<!--One thing to know is that you can assign multiple class ids under one class attribute by delimiting/splitting your entries with spaces.-->
+<script src="./todolist.js"></script>    
+</body>
+</html>
