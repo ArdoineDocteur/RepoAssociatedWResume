@@ -6,6 +6,9 @@ IP = In Progress
 ## Computer Science
 
 ### Personal Projects
+#### [SetupScript: Windows Powershell](https://github.com/ArdoineDocteur/RepoAssociatedWResume/blob/main/vs-codeWtihC%2B%2BCompilersScript.ps1)
+
+Purpose: Created a powershell script to setup a new computer with documents that lie on older computer. 
 
 #### [Rock Paper Scissors Game: Javascript, HTML, CSS]()
 Purpose: Create a Rock Paper Scissors Game using vanilla javascript, HTML, and CSS. 
