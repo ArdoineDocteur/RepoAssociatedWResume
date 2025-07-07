@@ -92,6 +92,72 @@ need for my database so that user data is properly handled, and its access is se
 #### [Job Ocean : MEAN Stack][IP]
 
 Purpose: Creating website-based database for job applicants for different organizations
+```mermaid
+flowchart TB
+  %% (cont here by ideating process of entity navigating through the system OR the system navigating through itself)
+%% Body of nodes and edges that describe interface 
+description["description"] --> descIntf0["User is forced to choose whether they're an applicant or administrator, when creating their account and when attempting to login. "] --> descIntf0.1["If user chooses administrator, User is asked &forall;y &in; {Organization, Admin Username, Admin password, (cont here if applicable)} through the form of a credential screen"] --> descIntf0.2["User is met with a screen that allows them to do x where x &in; {surf through all job-applicants,change organization[which would cater to people who run multiple businesses], logout, (cont here if applicable)"] --> descIntf0.3["User is able to go into more detail about job-applicants"] --> descIntf0.4["User is able to accept or reject job-applicants"] --> descIntf0.5["User is able to set stages of job-applicant process"] -->  descIntf0.6["User is able to send direct feedback to the job-applicant"] -->   descIntf0.7["User is able to communicate with other adminstrators. And if user is a job-applicant, they're also able to communicate with other job-applicants"] --> descIntf0.8["User is able to receive notification x where x &sube; {messages, interviews, rejections, round upgrades, (cont here if applicable)}"]
+
+%% --> descIntf0.9["(cont here if applicable, thought(s) before stopping: 1) Implementing heavy cybersecurity for program, 2) At this point, it seems like everything required for this to work is present. Thus, currently want to add things that convenience users. 3) At this point, seems like everything to support the user is acheived using the aforementioned process"]
+
+%% (cont here, after implementing other subgraphs in code)
+%% end of nodes and edges that desc interface
+
+
+    %% Code below addresses particular cases in regards to user interactions: 
+    deci0["User decides to login to check the statuses of their applications"] --> deci0.1["User logs in as an applicant"] --> deci0.2["User navigates to a toolbar to see the statuses of their applications"]
+    deci1["User decides to login to check the number of applicants to a particular job"] --> deci1.1["User logs in as an administrator"] --> deci1.2["User goes to job section"] --> deci1.3["User selects the job that they posted"] --> deci1.4["User observes the number of applicants for that job with the option to look at all applicants that applied"]
+     deci2["User decides to create an account "] --> deci2.1["User clicks button on initial state page and is redirected to page to create an account"]
+    %%(cont here IF Applicable) -->
+     deci3["User decides to logout "] --> deci3.1["User accesses toolbar to logout[means, need to have toolbar as one of static state(s)]"]
+    %%(cont here) -->
+     deci4["User decides to create an admin account with an intention to join an existing organization to help manage applicants"] --> deci4.1["User navigates to initial state and then creates an account and then joins the existing organization referenced by a dropdown menu"]
+     %%(cont here IF Applicable) -->
+    deci5["User decides to send dm to anoother job applicant"[note should be a synonym of dm that hosts the connection between job applicants and admins. Should be a certain order or indicator that differentiates the regular dm and the non-regular dm]] 
+   %%  (cont here) --> 
+    deci7["User decides to delete account"]
+    %% (cont here) -->
+    %% Also, brainstorm some paritcular use cases for this application. 
+
+
+
+
+
+    %%  end of Code that addresses particular cases in regards to user interactions: 
+
+
+    %% Feature(s) succeeding this point are optional
+    %% PN: The stuff above will be the template that I use to map out func of future projects!
+
+    %% body of how system will react to implicit and explicit requests by user via http. 
+    subgraph systemReactions
+      direction TB
+      subgraph rel-Sets-rep
+      direction TB
+      %% (cont here by modifying inptu below by making it general to prep it for specialization w.r.t the idea at hand). UPDATE #1: 100% complete
+      respIntf0["System receives data x that determines y, resulting in (x,y) where x &in; set of 2-tuples containing username and password and sends a bool value if (x,y) &in; &rho; where &rho; = x &in; U(users) in database."] --> respIntf0.1["System sends data z that determines a, resulting in (z,a) where z &in; U(users) and a &in; {U(job applications), current organization, profile, direct messages, (cont here if applicable) <insert elements relevant to assigning membership to user>} and sends a bool value if (z,a) &in; &rho; where &rho; = z is a y."] 
+      respIntf0.1 --> respIntf0.1.0["System receives data from user x requesting access to w, resulting in data retreival from database referencing data associated with w where w &in; {<insert elements relevant to data that is requested by user(s)}"] --> respInf0.1.1["If (x,w) &nin; &cup;<sub>1 &le; i &le; n</sub> &rho;<sub>i</sub>, then user isn't valid. The n relations are as follows: { x wants to see organization(s) w that are hiring on job board, x wants to see message(s) w received, x wants to see message(s) w sent, <insert the relations between data and user requests that permit the request and retrieval of the data>}"]
+      respIntf0.1 --> respIntf0.2["System receives data from user x requesting modification to u, resulting in data update from database referencing data associated with u where u &in; { AboutSection(x), StatusesOfMessages(x), FavoritedJobs(x), FavoritedOrganizations(x), (cont here IF applicable) <insert elements that are properties(x) associated with user x>}"]
+      respIntf0.1 --> respIntf0.3["System receives data from user x requesting DELETION to u, resulting in data DELETION from database referencing data associated with u where u &in; { messages(x), FavoritedJobs(x), FavoritedOrganizations(x), (cont here) <insert elements that are properties(x) associated with user x>}"]
+      respIntf0.1 --> respIntf0.4["System receives data from user x requesting CREATION to u, resulting in data CREATION and adding it to database referencing data associated with u where u &in; { messages(x),FavoritedJobs(x), FavoritedOrganizations(x),  <insert elements that are properties(x) associated with user x>}"]
+      end
+      subgraph regularVersion
+      direction TB
+        respIntf0["in prog"]
+
+      end
+      %% (cont here with non-rel-sets-rep)
+      %% (cont here at descIntf0.2.1[by addressing all cases where data may be modified]) 
+      %%, need to go back to UX desc and think about how relations can be used to describe modifying data, creating data, and deleting data[basically using relations to allow CRUD operations])[NOTE: In future, when writing powerpoint, goal is to transform these relations into nodes and edges to ensure that anyone can understand this process][Note as of 6/13/25: This was complete, this will be the approach taken for the rest of the backend procedures going forward. Will also have relation-sets verison as a subgraph and have the expanded, non-relation-sets version as a subgraph. 
+      end
+
+    %%end of body of how system will react to implicit and explicit requests by user via http
+
+
+
+%% end of body of Flowchart 1
+
+```
 
 [Personal Note]: <> "Can Make Project Title into a hyperlink referencing the directory containing the project. Inside of that directory, I can display my roadmap as a markdown document. The markdown document can also contain the instructions to run the project. If the roadmap wasn't used for the project, then I can go to project executables directory and derive my pre-alpha roadmap from there."
 
