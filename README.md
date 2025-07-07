@@ -86,12 +86,16 @@ need for my database so that user data is properly handled, and its access is se
 [Personal Note]: <> "Can Make Project Title into a hyperlink referencing the directory containing the project. Inside of that directory, I can display my roadmap as a markdown document. The markdown document can also contain the instructions to run the project. If the roadmap wasn't used for the project, then I can go to project executables directory and derive my pre-alpha roadmap from there."
 
 [PN]: <> "IMPT: Next project to add is the creating website-based database for job applicants for different organizations"
-#### Job Ocean : <<Programming Language Used>>[<-- Under Consideration][IP]
+#### [Job Ocean : MEAN Stack][IP]
 
 Purpose: Creating website-based database for job applicants for different organizations
 
 [Personal Note]: <> "Can Make Project Title into a hyperlink referencing the directory containing the project. Inside of that directory, I can display my roadmap as a markdown document. The markdown document can also contain the instructions to run the project. If the roadmap wasn't used for the project, then I can go to project executables directory and derive my pre-alpha roadmap from there."
----
+
+
+#### [TeachMe : MERN Stack][IP]
+
+Purpose: Build an app specifically for keeping track of both tutors, clients and their respective needs---
 
 ### School Projects 
 
