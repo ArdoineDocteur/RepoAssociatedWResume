@@ -86,12 +86,16 @@ need for my database so that user data is properly handled, and its access is se
 [Personal Note]: <> "Can Make Project Title into a hyperlink referencing the directory containing the project. Inside of that directory, I can display my roadmap as a markdown document. The markdown document can also contain the instructions to run the project. If the roadmap wasn't used for the project, then I can go to project executables directory and derive my pre-alpha roadmap from there."
 
 [PN]: <> "IMPT: Next project to add is the creating website-based database for job applicants for different organizations"
-#### Job Ocean : <<Programming Language Used>>[<-- Under Consideration][IP]
+#### [Job Ocean : MEAN Stack][IP]
 
 Purpose: Creating website-based database for job applicants for different organizations
 
 [Personal Note]: <> "Can Make Project Title into a hyperlink referencing the directory containing the project. Inside of that directory, I can display my roadmap as a markdown document. The markdown document can also contain the instructions to run the project. If the roadmap wasn't used for the project, then I can go to project executables directory and derive my pre-alpha roadmap from there."
----
+
+
+#### [TeachMe : MERN Stack][IP]
+
+Purpose: Build an app specifically for keeping track of both tutors, clients and their respective needs---
 
 ### School Projects 
 
@@ -101,3 +105,4 @@ Objective: [Implement three classes to output geometric shapes in the
 CSCE240_Program6 namespace](https://github.com/ArdoineDocteur/RepoAssociatedWResume/blob/main/Geometric%20Shape%20Generator(C%2B%2B)/Programming-Assignment-6.pdf)
 
 ---
+[Personal Note]: <> "Thought about having readme files in the respective project dirs that have instructions for testing out the respective programs. Thought about utilizing docker skills by making dockerfiles for setting up envs, as well as utilizing scripting skills to have program execution be seamless and handless for testing out[will revise later, but you should get the point]"
