@@ -23,6 +23,8 @@ Purpose: Created a static Youtube Home Page Clone using vanilla javascript, HTML
 #### [CssEditorTerminal : Python](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/CssEditorTerminal(Python))
 
 Purpose: Create a Terminal System for modifying the appearance of a HTML file.
+
+[Personal Note]: <> "Need to add video and powerpoint referencing presentation of this project. Need to put it in the proj's directory"
 ```txt
 Abstract Representation of vision for project
 
