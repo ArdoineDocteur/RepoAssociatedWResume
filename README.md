@@ -10,11 +10,16 @@ IP = In Progress
 
 Purpose: Created a powershell script to setup a new computer with documents that lie on older computer. 
 
-#### [Rock Paper Scissors Game: Javascript, HTML, CSS]()
+#### [Rock Paper Scissors Game: Javascript, HTML, CSS](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/RockPaperScissors(Javascript%2C%20HTML%2C%20CSS))
 Purpose: Create a Rock Paper Scissors Game using vanilla javascript, HTML, and CSS. 
 
-#### [ToDoList: Javascript, HTML, CSS]()
+#### [ToDoList: Javascript, HTML, CSS](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/ToDoList(Javascript%2C%20HTML%2C%20CSS))
 Purpose: Create a simple To-do List application using vanilla javascript, HTML, and CSS. 
+
+#### [Youtube Clone Project : Javascript, HTML, CSS](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/Youtube%20Clone%20Project)
+Purpose: Created a static Youtube Home Page Clone using vanilla javascript, HTML, and CSS. 
+
+
 #### [CssEditorTerminal : Python](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/CssEditorTerminal(Python))
 
 Purpose: Create a Terminal System for modifying the appearance of a HTML file.
