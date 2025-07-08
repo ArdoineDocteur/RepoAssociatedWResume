@@ -113,7 +113,7 @@ description["description"] --> descIntf0["User is forced to choose whether they'
     %%(cont here) -->
      deci4["User decides to create an admin account with an intention to join an existing organization to help manage applicants"] --> deci4.1["User navigates to initial state and then creates an account and then joins the existing organization referenced by a dropdown menu"]
      %%(cont here IF Applicable) -->
-    deci5["User decides to send dm to anoother job applicant"[note should be a synonym of dm that hosts the connection between job applicants and admins. Should be a certain order or indicator that differentiates the regular dm and the non-regular dm]] 
+    deci5["User decides to send dm to anoother job applicant"] 
    %%  (cont here) --> 
     deci7["User decides to delete account"]
     %% (cont here) -->
