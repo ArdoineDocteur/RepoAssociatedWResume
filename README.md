@@ -62,6 +62,10 @@ into files, and WILL create a makefile for running the program as well.
 - Going to make a simple makefile for the project as well.
 - IMPT: May have to consider a case where user inputs another data type other than a number. Will use a try and catch block for that.
 ```
+#### [YatzeeGame : C++]()
+
+Purpose: Created a Console Application version of the famous Yatzee Board Game. 
+[Personal Note]: <> "Need to figure out how to incorporate project from ELCT 201 in school projects and mention how this application was repurposed"
 #### [Chore App : MERN](https://github.com/Darnell-Chen/SMS-RemindR)
 - Brief Description: SMS RemindR is a web app that allows you to schedule notifications via SMS, Email, and Discord. Built using the MERN stack, it features both a backend and frontend framework to ensure seamless operation and user experience.
 
