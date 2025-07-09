@@ -8,7 +8,7 @@ IP = In Progress
 ### Personal Projects
 #### [SetupScript: Windows Powershell](https://github.com/ArdoineDocteur/RepoAssociatedWResume/blob/main/vs-codeWtihC%2B%2BCompilersScript.ps1)
 
-Purpose: Created a powershell script to setup a new computer with documents that lie on older computer. 
+Purpose: Created a powershell script to automate the installation of Visual Studio Code and the C/C++ Compilers. 
 
 #### [Rock Paper Scissors Game: Javascript, HTML, CSS](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/RockPaperScissors(Javascript%2C%20HTML%2C%20CSS))
 Purpose: Create a Rock Paper Scissors Game using vanilla javascript, HTML, and CSS. 
