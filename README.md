@@ -67,10 +67,10 @@ into files, and WILL create a makefile for running the program as well.
 Purpose: Created a Console Application version of the famous Yatzee Board Game. 
 
 [Personal Note]: <> "Need to figure out how to incorporate project from ELCT 201 in school projects and mention how this application was repurposed. Also, need to consider getting subset of slides that references repurposing of this software. "
-#### [SimpleNotepadApplication : C++]()
+#### [SimpleNotepadApplication : C++](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/SimpleNotepadApplication(C%2B%2B)/SimpleNotepadApplication)
 
 Purpose: Created a Simple Notepad GUI Application using the Qt's C++ API. 
-#### [SimpleLoginApplication : C++]()
+#### [SimpleLoginApplication : C++](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/SimpleLoginApp(C%2B%2B)/SimpleLoginApp)
 
 Purpose: Created a Simple Login GUI Application using the Qt's C++ API. 
 #### [Chore App : MERN](https://github.com/Darnell-Chen/SMS-RemindR)
