@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/rec">
+        <file>img/Screenshot 2024-05-07 222816.png</file>
+        <file>img/Screenshot 2024-05-13 000833.png</file>
+        <file>img/Screenshot 2024-05-13 095822.png</file>
+        <file>img/Screenshot 2024-05-13 095940.png</file>
+        <file>img/Screenshot 2024-05-13 100017.png</file>
+        <file>img/Screenshot 2024-05-13 100050.png</file>
+        <file>img/Screenshot 2024-05-13 100108.png</file>
+        <file>img/Screenshot 2024-05-13 100151.png</file>
+        <file>img/Screenshot 2024-05-13 100553.png</file>
+        <file>img/Screenshot 2024-05-13 101027.png</file>
+    </qresource>
+</RCC>
