@@ -127,3 +127,42 @@ CSCE240_Program6 namespace](https://github.com/ArdoineDocteur/RepoAssociatedWRes
 
 ---
 [Personal Note]: <> "Thought about having readme files in the respective project dirs that have instructions for testing out the respective programs. Thought about utilizing docker skills by making dockerfiles for setting up envs, as well as utilizing scripting skills to have program execution be seamless and handless for testing out[will revise later, but you should get the point]"
+
+### Specializations
+| Topic of Specializaiton | Brief Description of how I am able to excel in this Aspect |
+| --- | --- |
+| (coming soon!) |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+### Interest/Topics Learning Asynchronously
+| Interest | Brief Description of why I am learning certain subject |
+| --- | --- |
+| (coming soon!) |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
