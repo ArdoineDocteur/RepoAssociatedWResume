@@ -130,7 +130,6 @@ CSCE240_Program6 namespace](https://github.com/ArdoineDocteur/RepoAssociatedWRes
 
 ### Specializations
 
-[Personal Note]: <> "Here is the list of topics that I can do at this point: To help, brainstorm a list here: 1) Computer Programming, 2) project management, 3) System Administration, 4) Relational Database Design, 5) NoSQL Database Design, 6) Database Management, 7) Software Engineering/Development, 8) Full Stack Development/Engineering, 9) Web Development, 10) .NET Development, 11) Embedded Software Development, 12) Process Management, 13) Computer and Information Systems Management[NOTE: Can be proven by building business applications], 14) Circuit Analysis, 15) Operating Systems, 16) Simulations Development[through my knowledge of numerical methods], 17) (cont here) ." 
 | Topic of Specialization | Brief Description of how I am able to excel in this Aspect |
 | --- | --- |
 | (coming soon!) |  |
@@ -149,9 +148,15 @@ CSCE240_Program6 namespace](https://github.com/ArdoineDocteur/RepoAssociatedWRes
 |  |  |
 |  |  |
 |  |  |
+
+[Personal Note]: <> "Here is the list of topics that I can do at this point: To help, brainstorm a list here: 1) Computer Programming, 2) project management, 3) System Administration, 4) Relational Database Design, 5) NoSQL Database Design, 6) Database Management, 7) Software Engineering/Development, 8) Full Stack Development/Engineering, 9) Web Development, 10) .NET Development, 11) Embedded Software Development, 12) Process Management, 13) Computer and Information Systems Management[NOTE: Can be proven by building business applications], 14) Circuit Analysis, 15) Operating Systems, 16) Simulations Development[through my knowledge of numerical methods], 17) (cont here) ." 
+
+
 ### Interest/Topics Learning Asynchronously
 
 [Personal Note]: <> "Here is the list of topics that I am learning to do at this point: Need to also make a list of technologies I am currently working towards learning: 1) Manufacturing Systems, 2) CAD, 3) HMI, 4) Network Administration, 5) Advanced Digital Design, 6) (cont here)" 
+
+
 | Interest | Brief Description of why I am learning certain subject |
 | --- | --- |
 | (coming soon!) |  |
