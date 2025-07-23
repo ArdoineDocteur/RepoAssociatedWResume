@@ -132,11 +132,11 @@ CSCE240_Program6 namespace](https://github.com/ArdoineDocteur/RepoAssociatedWRes
 
 | Topic of Specialization | Brief Description of how I am able to excel in this Aspect |
 | --- | --- |
-| Computer Programming (coming soon!) |  |
+| Computer Programming  | (coming soon!) |
 | Project Management  |  |
 | System Administration |  |
-| Relational Database Design |  |
-| NoSQL Database Design |  |
+| Relational Database Design & Development |  |
+| NoSQL Database Design & Development |  |
 | Database Management |  |
 | Software Engineering & Development |  |
 | Full Stack Development/Engineering |  |
