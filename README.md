@@ -6,25 +6,38 @@ IP = In Progress
 ## Computer Science
 
 ### Personal Projects
-#### [SetupScript: Windows Powershell](https://github.com/ArdoineDocteur/RepoAssociatedWResume/blob/main/vs-codeWtihC%2B%2BCompilersScript.ps1)
+#### Process Automation
+##### [SetupScript: Windows Powershell](https://github.com/ArdoineDocteur/RepoAssociatedWResume/blob/main/vs-codeWtihC%2B%2BCompilersScript.ps1)
 
 Purpose: Created a powershell script to automate the installation of Visual Studio Code and the C/C++ Compilers. 
+#### Application Development
+##### [YatzeeGame : C++](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/YatzeeGame(C%2B%2B))
 
-#### [Rock Paper Scissors Game: Javascript, HTML, CSS](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/RockPaperScissors(Javascript%2C%20HTML%2C%20CSS))
-Purpose: Create a Rock Paper Scissors Game using vanilla javascript, HTML, and CSS. 
+Purpose: Created a Console Application version of the famous Yatzee Board Game. 
 
-#### [ToDoList: Javascript, HTML, CSS](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/ToDoList(Javascript%2C%20HTML%2C%20CSS))
-Purpose: Create a simple To-do List application using vanilla javascript, HTML, and CSS. 
-
-#### [Youtube Clone Project : Javascript, HTML, CSS](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/Youtube%20Clone%20Project)
-Purpose: Created a static Youtube Home Page Clone using vanilla javascript, HTML, and CSS. 
-
-
-#### [CssEditorTerminal : Python](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/CssEditorTerminal(Python))
+[Personal Note]: <> "Need to figure out how to incorporate project from ELCT 201 in school projects and mention how this application was repurposed. Also, need to consider getting subset of slides that references repurposing of this software. "
+##### [CssEditorTerminal : Python](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/CssEditorTerminal(Python))
 
 Purpose: Create a Terminal System for modifying the appearance of a HTML file.
 
 [Personal Note]: <> "Need to add video and powerpoint referencing presentation of this project. Need to put it in the proj's directory"
+##### [Guessing Game : C++](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/GuessingGame(c%2B%2B))
+
+Purpose: Created a guessing game using dynamic memory allocation through the use of unique pointers using C++
+```txt
+Abstract Representation of vision for project
+
+Subobjectives:
+- 1) Create a user environment that directly tells the user the req instructions
+- 2) Use an unique pointer array to output the user's entries.
+Ideas:
+- Will make unique pointer array of type int.
+- Initial plan is to write everything in main method. After the logic is implemented correctly, I will split the code
+into files, and WILL create a makefile for running the program as well.
+- Make sure to explain the coding logic effectively using a decent amount of comments.
+- Going to make a simple makefile for the project as well.
+- IMPT: May have to consider a case where user inputs another data type other than a number. Will use a try and catch block for that.
+```
 ```txt
 Abstract Representation of vision for project
 
@@ -45,39 +58,26 @@ css selector selection and an array[list] of modifcations
 for that particular css selection.
 
 ```
-#### [Guessing Game : C++](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/GuessingGame(c%2B%2B))
-
-Purpose: Created a guessing game using dynamic memory allocation through the use of unique pointers using C++
-```txt
-Abstract Representation of vision for project
-
-Subobjectives:
-- 1) Create a user environment that directly tells the user the req instructions
-- 2) Use an unique pointer array to output the user's entries.
-Ideas:
-- Will make unique pointer array of type int.
-- Initial plan is to write everything in main method. After the logic is implemented correctly, I will split the code
-into files, and WILL create a makefile for running the program as well.
-- Make sure to explain the coding logic effectively using a decent amount of comments.
-- Going to make a simple makefile for the project as well.
-- IMPT: May have to consider a case where user inputs another data type other than a number. Will use a try and catch block for that.
-```
-#### [YatzeeGame : C++](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/YatzeeGame(C%2B%2B))
-
-Purpose: Created a Console Application version of the famous Yatzee Board Game. 
-
-[Personal Note]: <> "Need to figure out how to incorporate project from ELCT 201 in school projects and mention how this application was repurposed. Also, need to consider getting subset of slides that references repurposing of this software. "
-#### [SimpleNotepadApplication : C++](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/SimpleNotepadApplication(C%2B%2B)/SimpleNotepadApplication)
+#### Full-Stack Development 
+##### [SimpleNotepadApplication : C++](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/SimpleNotepadApplication(C%2B%2B)/SimpleNotepadApplication)
 
 Purpose: Created a Simple Notepad GUI Application using the Qt's C++ API. 
-#### [SimpleLoginApplication : C++](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/SimpleLoginApp(C%2B%2B)/SimpleLoginApp)
+##### [SimpleLoginApplication : C++](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/SimpleLoginApp(C%2B%2B)/SimpleLoginApp)
 
 Purpose: Created a Simple Login GUI Application using the Qt's C++ API. 
-#### [Chore App : MERN](https://github.com/Darnell-Chen/SMS-RemindR)
+#### Web Development 
+##### [Rock Paper Scissors Game: Javascript, HTML, CSS](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/RockPaperScissors(Javascript%2C%20HTML%2C%20CSS))
+Purpose: Create a Rock Paper Scissors Game using vanilla javascript, HTML, and CSS. 
+
+##### [ToDoList: Javascript, HTML, CSS](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/ToDoList(Javascript%2C%20HTML%2C%20CSS))
+Purpose: Create a simple To-do List application using vanilla javascript, HTML, and CSS. 
+
+##### [Youtube Clone Project : Javascript, HTML, CSS](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/Youtube%20Clone%20Project)
+Purpose: Created a static Youtube Home Page Clone using vanilla javascript, HTML, and CSS. 
+##### [Chore App : MERN](https://github.com/Darnell-Chen/SMS-RemindR)
 - Brief Description: SMS RemindR is a web app that allows you to schedule notifications via SMS, Email, and Discord. Built using the MERN stack, it features both a backend and frontend framework to ensure seamless operation and user experience.
 
-
-#### [Grocery Sales Web Scraper: Python][IP]
+##### [Grocery Sales Web Scraper: Python][IP]
 
 Purpose: Creating a web scraping project using Python that can help people save money when they go to the grocery store. This project benefits those who are regular IGA Grocery Shoppers.
 ```txt
@@ -118,6 +118,11 @@ Purpose: Creating website-based database for job applicants for different organi
 
 Purpose: Build an app specifically for keeping track of both tutors, clients and their respective needs---
 
+
+
+
+
+
 ### School Projects 
 
 #### [Geometric Shape Generator : C++](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/Geometric%20Shape%20Generator(C%2B%2B))
@@ -140,18 +145,19 @@ CSCE240_Program6 namespace](https://github.com/ArdoineDocteur/RepoAssociatedWRes
 | Database Management |  |
 | Software Engineering & Development |  |
 | Full Stack Development/Engineering |  |
+| Full Stack Design |  |
 | Web Development |  |
 | .NET Development |  |
+| Application Development & Design |  |
 | Embedded Software Development |  |
 | Process Management & Automation |  |
 | Computer and Information Systems Management |  |
 | Operating Systems |  |
 | Simulations Development |  |
-| System Engineering |  |
+| System Engineering & Design|  |
 | Signals and Systems |  |
 
-[Personal Note]: <> "Here is the list of topics that I can do at this point: To help, brainstorm a list here: 1) Computer Programming, 2) project management, 3) System Administration, 4) Relational Database Design, 5) NoSQL Database Design, 6) Database Management, 7) Software Engineering/Development, 8) Full Stack Development/Engineering, 9) Web Development, 10) .NET Development, 11) Embedded Software Development, 12) Process Management, 13) Computer and Information Systems Management[NOTE: Can be proven by building business applications], 14) Circuit Analysis, 15) Operating Systems, 16) Simulations Development[through my knowledge of numerical methods], 17) (cont here) ." 
-
+[Personal Note]: <> "Here is the list of topics that I can do at this point: To help, brainstorm a list here: 1) Computer Programming, 2) project management, 3) System Administration, 4) Relational Database Design, 5) NoSQL Database Design, 6) Database Management, 7) Software Engineering/Development, 8) Full Stack Development/Engineering, 9) Web Development, 10) .NET Development, 11) Embedded Software Development, 12) Process Management, 13) Computer and Information Systems Management[NOTE: Can be proven by building business applications], 14) Signals and Systems[since it encompasses ability to analyze circuits], 15) Operating Systems, 16) Simulations Development[through my knowledge of numerical methods], 17) System Engineering & Design, 18) Software Architecture, 19) Simulation Design?[due to prowess in PHYS 211 and PHYS 212?], 20) Full Stack Design, 21) Application Development, 22) (cont here)"
 
 ### Interest/Topics Learning Asynchronously
 
