@@ -111,12 +111,39 @@ need for my database so that user data is properly handled, and its access is se
 
 Purpose: Creating website-based database for job applicants for different organizations
 
+Abstract Representation of Desired User Experience: 
+
+```mermaid
+%% (coming soon!)
+
+```
+
+Object-Oriented Plan to acheive desired User Experience: 
+```mermaid
+%% (coming soon!)
+
+```
+
+
 [Personal Note]: <> "Can Make Project Title into a hyperlink referencing the directory containing the project. Inside of that directory, I can display my roadmap as a markdown document. The markdown document can also contain the instructions to run the project. If the roadmap wasn't used for the project, then I can go to project executables directory and derive my pre-alpha roadmap from there."
 
 
 ##### [TeachMe : MERN Stack][IP]
 
-Purpose: Build an app specifically for keeping track of both tutors, clients and their respective needs---
+Purpose: Build an app specifically for keeping track of both tutors, clients and their respective needs
+
+Abstract Representation of Desired User Experience: 
+
+```mermaid
+%% (coming soon!)
+
+```
+
+Object-Oriented Plan to acheive desired User Experience: 
+```mermaid
+%% (coming soon!)
+
+```
 
 
 
@@ -131,6 +158,16 @@ Purpose: Build an app specifically for keeping track of both tutors, clients and
 Objective: [Implement three classes to output geometric shapes in the
 CSCE240_Program6 namespace](https://github.com/ArdoineDocteur/RepoAssociatedWResume/blob/main/Geometric%20Shape%20Generator(C%2B%2B)/Programming-Assignment-6.pdf)
 
+##### [Game Show Console Application: Java](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/Showcase%20Game(Java))
+
+Objective: Created a Game Show Application using Object-Oriented Programming in Java. 
+
+##### [Shape Database: Java](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/Shape%20Database(Java))
+
+Objective: Created a Shape Database using the Binary Search Tree Data Structure.
+##### [Sheep Scheduler : Java](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/Sheep%20Scheduler(Java))
+
+Objective: Created a Sheep Scheduler using the Min Heap Data structure. 
 ---
 [Personal Note]: <> "Thought about having readme files in the respective project dirs that have instructions for testing out the respective programs. Thought about utilizing docker skills by making dockerfiles for setting up envs, as well as utilizing scripting skills to have program execution be seamless and handless for testing out[will revise later, but you should get the point]"
 
@@ -144,7 +181,7 @@ CSCE240_Program6 namespace](https://github.com/ArdoineDocteur/RepoAssociatedWRes
 | Relational Database Design & Development |  |
 | NoSQL Database Design & Development |  |
 | Database Management |  |
-| Software Engineering & Development |  |
+| Object-Oriented Programming & Design |  |
 | Full Stack Development/Engineering |  |
 | Full Stack Design |  |
 | Web Development |  |
