@@ -168,6 +168,7 @@ Objective: Created a Shape Database using the Binary Search Tree Data Structure.
 ##### [Sheep Scheduler : Java](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/Sheep%20Scheduler(Java))
 
 Objective: Created a Sheep Scheduler using the Min Heap Data structure. 
+
 ---
 [Personal Note]: <> "Thought about having readme files in the respective project dirs that have instructions for testing out the respective programs. Thought about utilizing docker skills by making dockerfiles for setting up envs, as well as utilizing scripting skills to have program execution be seamless and handless for testing out[will revise later, but you should get the point]"
 
