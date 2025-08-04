@@ -139,7 +139,7 @@ description["description"] --> descIntf0["User is forced to choose whether they'
     %%(cont here) -->
      deci4["User decides to create an admin account with an intention to join an existing organization to help manage applicants"] --> deci4.1["User navigates to initial state and then creates an account and then joins the existing organization referenced by a dropdown menu"] --> deci4.2["User is unable to acess admin options involving their organization until they are accepted by the organization's creator"]
      %%(cont here IF Applicable) -->
-    deci5["User decides to send dm to anoother job applicant"[note should be a synonym of dm that hosts the connection between job applicants and admins. Should be a certain order or indicator that differentiates the regular dm and the non-regular dm]] --> deci5.1["User navigates to message state"] --> deci5.2["User clicks feature to dm the job applicant of their choice"] --> deci5.3["User writes and sends message"]
+    deci5["User decides to send dm to anoother job applicant"] --> deci5.1["User navigates to message state"] --> deci5.2["User clicks feature to dm the job applicant of their choice"] --> deci5.3["User writes and sends message"]
     %% NOTE: This is a feature that can be shortcut for experienced users via the job applicant's page. Can be something to add in a future update for app. 
    %%  (cont here) --> 
     deci7["User decides to delete account"] --> deci7.1["User accesses setting page"] --> deci7.1["User clicks feature that permits deletion of account and accepts terms via prompt"] 
@@ -167,6 +167,7 @@ description["description"] --> descIntf0["User is forced to choose whether they'
       respIntf0.1 --> respIntf0.2["System receives data from user x requesting modification to u, resulting in data update from database referencing data associated with u where u &in; { Profile(x) ,AboutSection(x), StatusesOfMessages(x), FavoritedJobs(x), FavoritedOrganizations(x),  JobApplications(x), admins(organization(x)), preferences(x) (cont here IF applicable) <insert elements that are properties(x) associated with user x>}"]
       respIntf0.1 --> respIntf0.3["System receives data from user x requesting DELETION to u, resulting in data DELETION from database referencing data associated with u where u &in; {accountDeletion(x), messages(x), FavoritedJobs(x), FavoritedOrganizations(x), JobApplications(x), admins(organization(x)), notification(x), (cont here) <insert elements that are properties(x) associated with user x>}"]
       respIntf0.1 --> respIntf0.4["System receives data from user x requesting CREATION to u, resulting in data CREATION and adding it to database referencing data associated with u where u &in; { accountCreation(x), messages(x),FavoritedJobs(x), FavoritedOrganizations(x), JobApplications(x), admins(organization(x)), notification(x), preferences(x)  <insert elements that are properties(x) associated with user x>}"]
+
       end
       subgraph regularVersion
       direction TB
