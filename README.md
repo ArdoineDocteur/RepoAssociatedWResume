@@ -115,12 +115,183 @@ Abstract Representation of Desired User Experience:
 
 ```mermaid
 %% (coming soon!)
+%% Body of FlowChart 1 for idea #8
+%% For reference, Idea #8 is as follows: Create a Website-based database for job applicants for different organizations
+
+flowchart TB
+  %% (cont here by ideating process of entity navigating through the system OR the system navigating through itself)
+%% Body of nodes and edges that describe interface 
+description["description"] --> descIntf0["User is forced to choose whether they're an applicant or administrator, when creating their account and when attempting to login. "] --> descIntf0.1["If user chooses administrator, User is asked &forall;y &in; {Organization, Admin Username, Admin password, (cont here if applicable)} through the form of a credential screen"] --> descIntf0.2["User is met with a screen that allows them to do x where x &in; {surf through all job-applicants,change organization[which would cater to people who run multiple businesses], logout, (cont here if applicable)"] --> descIntf0.3["User is able to go into more detail about job-applicants"] --> descIntf0.4["User is able to accept or reject job-applicants"] --> descIntf0.5["User is able to set stages of job-applicant process"] -->  descIntf0.6["User is able to send direct feedback to the job-applicant"] -->   descIntf0.7["User is able to communicate with other adminstrators. And if user is a job-applicant, they're also able to communicate with other job-applicants"] --> descIntf0.8["User is able to receive notification x where x &sube; {messages, interviews, rejections, round upgrades, (cont here if applicable)}"]
+
+%% --> descIntf0.9["(cont here if applicable, thought(s) before stopping: 1) Implementing heavy cybersecurity for program, 2) At this point, it seems like everything required for this to work is present. Thus, currently want to add things that convenience users. 3) At this point, seems like everything to support the user is acheived using the aforementioned process"]
+
+%% (cont here, after implementing other subgraphs in code)
+%% end of nodes and edges that desc interface
+
+
+    %% Code below addresses particular cases in regards to user interactions: 
+    %% NOTE: Consider having below nodes and edges be a subgraph named theoretical user interactions
+    deci0["User decides to login to check the statuses of their applications"] --> deci0.1["User logs in as an applicant"] --> deci0.2["User navigates to a toolbar to see the statuses of their applications"]
+    deci1["User decides to login to check the number of applicants to a particular job"] --> deci1.1["User logs in as an administrator"] --> deci1.2["User goes to job section"] --> deci1.3["User selects the job that they posted"] --> deci1.4["User observes the number of applicants for that job with the option to look at all applicants that applied"]
+     deci2["User decides to create an account "] --> deci2.1["User clicks button on initial state page and is redirected to page to create an account"]
+    %%(cont here IF Applicable) -->
+     deci3["User decides to logout "] --> deci3.1["User accesses toolbar to logout[means, need to have toolbar as one of static state(s)]"]
+    %%(cont here) -->
+     deci4["User decides to create an admin account with an intention to join an existing organization to help manage applicants"] --> deci4.1["User navigates to initial state and then creates an account and then joins the existing organization referenced by a dropdown menu"] --> deci4.2["User is unable to acess admin options involving their organization until they are accepted by the organization's creator"]
+     %%(cont here IF Applicable) -->
+    deci5["User decides to send dm to anoother job applicant"[note should be a synonym of dm that hosts the connection between job applicants and admins. Should be a certain order or indicator that differentiates the regular dm and the non-regular dm]] --> deci5.1["User navigates to message state"] --> deci5.2["User clicks feature to dm the job applicant of their choice"] --> deci5.3["User writes and sends message"]
+    %% NOTE: This is a feature that can be shortcut for experienced users via the job applicant's page. Can be something to add in a future update for app. 
+   %%  (cont here) --> 
+    deci7["User decides to delete account"] --> deci7.1["User accesses setting page"] --> deci7.1["User clicks feature that permits deletion of account and accepts terms via prompt"] 
+    %% (cont here) -->
+    %% Also, brainstorm some paritcular use cases for this application. 
+
+
+
+
+
+    %%  end of Code that addresses particular cases in regards to user interactions: 
+
+
+    %% Feature(s) succeeding this point are optional
+    %% PN: The stuff above will be the template that I use to map out func of future projects!
+
+    %% body of how system will react to implicit and explicit requests by user via http. 
+    subgraph systemReactions
+      direction TB
+      subgraph rel-Sets-rep
+      direction TB
+      %% (cont here by modifying inptu below by making it general to prep it for specialization w.r.t the idea at hand). UPDATE #1: 100% complete
+      respIntf0["System receives data x that determines y, resulting in (x,y) where x &in; set of 2-tuples containing username and password and sends a bool value if (x,y) &in; &rho; where &rho; = x &in; U(users) in database."] --> respIntf0.1["System sends data z that determines a, resulting in (z,a) where z &in; U(users) and a &in; {U(job applications), current organization, profile, direct messages, (cont here if applicable) <insert elements relevant to assigning membership to user>} and sends a bool value if (z,a) &in; &rho; where &rho; = z is a y."] 
+      respIntf0.1 --> respIntf0.1.0["System receives data from user x requesting access to w, resulting in data retreival from database referencing data associated with w where w &in; {Other users, Organizations, notifications(x), preferences(x) <insert elements relevant to data that is requested by user(s)}"] --> respInf0.1.1["If (x,w) &nin; &cup;<sub>1 &le; i &le; n</sub> &rho;<sub>i</sub>, then user isn't valid. The n relations are as follows: { x wants to see organization(s) w that are hiring on job board, x wants to see message(s) w received, x wants to see message(s) w sent, <insert the relations between data and user requests that permit the request and retrieval of the data>}"]
+      respIntf0.1 --> respIntf0.2["System receives data from user x requesting modification to u, resulting in data update from database referencing data associated with u where u &in; { Profile(x) ,AboutSection(x), StatusesOfMessages(x), FavoritedJobs(x), FavoritedOrganizations(x),  JobApplications(x), admins(organization(x)), preferences(x) (cont here IF applicable) <insert elements that are properties(x) associated with user x>}"]
+      respIntf0.1 --> respIntf0.3["System receives data from user x requesting DELETION to u, resulting in data DELETION from database referencing data associated with u where u &in; {accountDeletion(x), messages(x), FavoritedJobs(x), FavoritedOrganizations(x), JobApplications(x), admins(organization(x)), notification(x), (cont here) <insert elements that are properties(x) associated with user x>}"]
+      respIntf0.1 --> respIntf0.4["System receives data from user x requesting CREATION to u, resulting in data CREATION and adding it to database referencing data associated with u where u &in; { accountCreation(x), messages(x),FavoritedJobs(x), FavoritedOrganizations(x), JobApplications(x), admins(organization(x)), notification(x), preferences(x)  <insert elements that are properties(x) associated with user x>}"]
+      end
+      subgraph regularVersion
+      direction TB
+        respIntf0["in prog"]
+
+      end
+      %% (cont here with non-rel-sets-rep)
+      %% (cont here at descIntf0.2.1[by addressing all cases where data may be modified]) 
+      %%, need to go back to UX desc and think about how relations can be used to describe modifying data, creating data, and deleting data[basically using relations to allow CRUD operations])[NOTE: In future, when writing powerpoint, goal is to transform these relations into nodes and edges to ensure that anyone can understand this process][Note as of 6/13/25: This was complete, this will be the approach taken for the rest of the backend procedures going forward. Will also have relation-sets verison as a subgraph and have the expanded, non-relation-sets version as a subgraph. 
+      end
+
+    %%end of body of how system will react to implicit and explicit requests by user via http
+
+
+
+%% end of body of Flowchart 1
 
 ```
 
 Object-Oriented Plan to acheive desired User Experience: 
 ```mermaid
 %% (coming soon!)
+%% Body of ClassDiagram 1 for idea #8
+%% For reference, Idea #8 is as follows: Create a Website-based database for job applicants for different organizations
+classDiagram
+  %% body of class imps
+  class user {
+     -message* usr_msgs;
+     -profile* usr_profile; 
+     %%^^ if user is admin, they should have ability to manage multiple job applicant(s)'s profiles or see rather. The first profile will always reference the user's profile tho. 
+  -Application* apps;
+  %%^^^ will be sorted in pending, non-pending status applications, and submitted applications. & received applications for job_apps and admins RESPECTIVELY. 
+  -Job* assoc_jobs; 
+  %%^^^ will be sorted as available jobs, and favorited jobs. For Admins, it will be published jobs and unpublished jobs. 
+  -string username;
+  -string password;
+  Organization* favorites
+  %% ^^ will reference favorite Organizations. May not have favorites for the Adminstrators themselves tho. 
+  %%[ALSO, need ot include getters and setters]
+
+ %% (cont here by inserting the member vars and funcs that'll be required for this class[don't forget the getters and setters])
+  }
+  class Application {
+     -int status
+     %% ^^ will reference THREE vals: accepted, rejected, pending . 
+     %% (cont here by inserting the member vars and funcs that'll be required for this class[don't forget the getters and setters])
+  }
+  class Organization {
+    -String name;
+    -user* members;
+    -Job* jobs_provided;
+
+
+
+
+  %% class is needed to house job-applications for people to apply to. May also need some condition that allows organization to filter job-applications to be posted or not. 
+
+  }
+  class Job {
+    -String name;
+    -String requirements;
+    -String preferredQuals;
+
+  %% (cont here with members that help a job post be clear as possible)
+
+
+
+
+  }
+  class message {
+     %% bool isGroup
+     %% int groupNum; 
+      -Date* time_sent;
+      #String* content;
+      -Media* picture;
+     %% ^^ will be used to keep track of placement of messages
+     %% NOTE: Need to consider how order of messages in a group chat or non-group chat will be 
+     %% kept consistent. First thing I thought about is utilizing the date object.  Due to complexity, goal is to ignore the inclusion of group chats for now. 
+
+ %% (cont here by inserting the member vars and funcs that'll be required for this class)
+
+  }
+  class Media {
+  <<enumeration>>
+  PICTURE
+  VIDEO
+
+ %% (cont here by inserting the enum constants that will be required for this class)
+  }
+  class profile {
+  %% List of things I thought of: 1) Name, 2) Education, 3) Expertise, 4) About, 5) (cont here IF applicable)
+     string name;
+     string education; 
+     string expertise;
+     string about;
+     %% ^^ can have this be an object or merely a string that takes in values delimited using : tabs, etc. [UPDATE: Ditched this b/c it would be too abstract when presenting information].
+     %% (cont here by inserting the member vars and funcs that'll be required for this class)[for this clas, focus is on identifying the main attrs of a profile]
+  }
+  %% the job applicants and admins will inherit from the user object
+  class job_applicants {
+ %% (cont here by inserting the member vars and funcs that'll be required for this class)[will need funcs for CRUDing data referenced by container member vars. NOTE: THis is really for UML purposes since this will be carried out using HTTP requests to the database and things like that. ]
+  }
+  class admin {
+ %% (cont here by inserting the member vars and funcs that'll be required for this class)[will need funcs for CRUDing data referenced by container member vars. NOTE: THis is really for UML purposes since this will be carried out using HTTP requests to the database and things like that. ]
+  }
+
+
+  %% end of class imps
+
+  %% body of relationships between classes
+  admin --|> user 
+  %% NOTE: Will also need to put the functional relationships as well, aka 0:M, M:M, etc. 
+  job_applicants --|> user
+  message --* user
+  profile --* user
+  %%(cont here by writing the necessary relationships)[will need funcs for CRUDing data referenced by container member vars. NOTE: THis is really for UML purposes since this will be carried out using HTTP requests to the database and things like that. ]
+
+
+  %% end of body of relationships between classes
+
+
+  %%(cont here by referring to UX description in flowchart directory)
+%% NOTE: At this point, I believe more members will come about when their respective schemas are implemented. 
+
+%% end of ClassDiagram 1 for idea #8
 
 ```
 
@@ -136,12 +307,145 @@ Abstract Representation of Desired User Experience:
 
 ```mermaid
 %% (coming soon!)
+%% Body of FlowChart 2 for idea #11
+%% For reference, idea #11 is as follows: Build an app specifically for keeping track of both tutors, clients and their respective needs[this app will be a generalized version of this purpose, allowing any tutor to keep track of their clients]
+  %% (cont here by ideating process of entity navigating through the system OR the system navigating through itself)
+%% Body of nodes and edges that describe interface 
+flowchart TB
+  description["description"] --> descIntf0["User is able to login as a tutor or a client"] --> descIntf0.1["If user is a tutor"] & descIntf0.2["If user is a client"]
+  descIntf0.1 --> descIntf0.1.0["User is allowed to surf through a client board that allows them to find clients"] --> descIntf0.1.1["User is allowed to click a client to see their profile. The profile in question will contain attribute x which will be used to determine if client has requests that the current tutor can provide, where x &in; {needs,confidence/skill level, (cont here if applicable)}"]
+  descIntf0.2 --> descIntf0.2.0["User is allowed to surf through a tutor board that allows them to find tutors"] --> descIntf0.2.1["User is allowed to click a tutor to see their profile. The profile in question will contain attribute x which will be used to determine if tutor has skills that aligns with current client's needs, where x &in; {skills,experience, (cont here if applicable)}"] --> descIntf0.2.2["(cont here, thoughts before halting imp: 1) Adding a forum, 2) allowing tutors to host small class like sessions that involve assignments, videos, etc., 3) (cont here) "]
+  descIntf0 --> descIntf0.3["User is allowed to communicate with tutors and vice versa and amongst themselves"] 
+%% (cont here, after implementing other subgraphs in code)
+
+%% end of nodes and edges that desc interface
+
+
+    %% Code below addresses particular cases in regards to user interactions: 
+    %% NOTE: Consider having below nodes and edges be a subgraph named theoretical user interactions
+    deci0["User decides to check to see if they're favorite tutor has updated their skills yet[NOTE: This generated an idea to have a wishlist-like system w.r.t skills that client would wanna learn"] 
+    %% (cont here) -->
+    deci1["User decides to speak to tutor or client personally via DM (cont here)"] --> deci1.1["User logs in as their desired role"] --> deci1.2["User accesses their messages and finds the client that they want to speak to"]
+    %% (cont here) -->
+    deci2["User decides to access a video that one of tutors had created"] --> deci2.1["User navigates to tutor's profile OR navigates to class group created by tutor(FEATURE IMPLICATION(<-- using this to identify things that need to be adhered to when writing up UODesign ideas for particular objective))"]
+    %%  --> deci2.2["Then ] (cont here) -->
+    deci3["User is a tutor that decides to post a video for their clients to review"]
+    %% (cont here) -->
+    deci4["User is a tutor that decides to reject or accept a client into a particular classroom"]
+    %% (cont here) -->
+    deci5["User is a tutor that decides to create, modify, or delete their classroom[btw, the classromo will consist of the class-like sessions]"]
+    %% (cont here) -->
+    deci6["User decides to logout"]
+    %% (cont here) -->
+    deci7["User decides to delete account"]
+    %% (cont here) -->
+
+
+
+
+    %%  end of Code that addresses particular cases in regards to user interactions: 
+
+
+    %% Feature(s) succeeding this point are optional
+    %% PN: The stuff above will be the template that I use to map out func of future projects!
+
+    %% body of how system will react to implicit and explicit requests by user via http. 
+      %% (cont here by modifying inptu below by making it general to prep it for specialization w.r.t the idea at hand). UPDATE #1: 100% complete
+      respIntf0["System receives data x that determines y, resulting in (x,y) where x &in; set of 2-tuples containing username and password and sends a bool value if (x,y) &in; &rho; where &rho; = x &in; U(users) in database."] --> respIntf0.1["System sends data z that determines a, resulting in (z,a) where z &in; U(users) and a &in; {clients &cup; tutors', tutors &cup; clients', organization, (cont here if applicable), <insert elements relevant to assigning membership to user>} and sends a bool value if (z,a) &in; &rho; where &rho; = z is a y."] 
+      respIntf0.1 --> respIntf0.1.0["System receives data from user x requesting access to w, resulting in data retreival from database referencing data associated with w where w &in; {Tutor Board, tutorRequests({a : a &ne; x}), [cont here]<insert elements relevant to data that is requested by user(s)>}"] --> respInf0.1.1["If (x,w) &nin; &cup;<sub>1 &le; i &le; n</sub> &rho;<sub>i</sub>, then user isn't valid. The n relations are as follows: {<insert the relations between data and user requests that permit the request and retrieval of the data>}"]
+      respIntf0.1 --> respIntf0.2["System receives data from user x requesting modification to u, resulting in data update from database referencing data associated with u where u &in; {profile(x), classroom(x), FavoriteTutors(x), FavoriteClients(x), Settings(x), tutorRequests({a : a &ne; x}), <insert elements that are properties(x) associated with user x>}"]
+      respIntf0.1 --> respIntf0.3["System receives data from user x requesting DELETION to u, resulting in data DELETION from database referencing data associated with u where u &in; {accountDeletion(x), Media(x), tutorRequests({a : a &ne; x})<insert elements that are properties(x) associated with user x>}"]
+      respIntf0.1 --> respIntf0.4["System receives data from user x requesting CREATION to u, resulting in data CREATION and adding it to database referencing data associated with u where u &in; {accountCreation(x),Media(x), tutorRequests(x) <insert elements that are properties(x) associated with user x>}"]
+      end
+      subgraph regularVersion
+      direction TB
+        respIntf0["in prog"]
+
+      end
+      %% (cont here with non-rel-sets-rep)
+      %% (cont here at descIntf0.2.1[by addressing all cases where data may be modified]) 
+      %%, need to go back to UX desc and think about how relations can be used to describe modifying data, creating data, and deleting data[basically using relations to allow CRUD operations])[NOTE: In future, when writing powerpoint, goal is to transform these relations into nodes and edges to ensure that anyone can understand this process][Note as of 6/13/25: This was complete, this will be the approach taken for the rest of the backend procedures going forward. Will also have relation-sets verison as a subgraph and have the expanded, non-relation-sets version as a subgraph. 
+      end
+
+
+    %%end of body of how system will react to implicit and explicit requests by user via http
+
+
+
+%% end of body of Flowchart 2
 
 ```
 
 Object-Oriented Plan to acheive desired User Experience: 
 ```mermaid
 %% (coming soon!)
+%% Body of ClassDiagram 2 for idea #11
+%% For reference, Idea #11 is as follows: Build an app specifically for keeping track of your tutoring clients and their needs[this app will be a generalized version of this purpose, allowing any tutor to keep track of their clients]
+classDiagram
+  class User {
+ - Group* usr_groups;
+ - String user_name;
+ - String password;
+ -Profile* usr_profile;
+ -Message* msgs;
+ - Post* usr_posts;
+  user* favorites
+  %% ^^ will reference favorite tutors. May not have favorites for the tutors themselves tho. 
+
+
+ %% (cont here by inserting the member vars and funcs that'll be required for this class)[will need funcs for CRUDing data referenced by container member vars. NOTE: THis is really for UML purposes since this will be carried out using HTTP requests to the database and things like that. ]
+  }
+  %%class Group {
+ %% (cont here by inserting the member vars and funcs that'll be required for this class)
+ %% NOTE: Group would refer to group chat mainly, so this will be embedded in message class. 
+  %%}
+  %% the tutor and client will inherit from the user object
+  class Tutor {
+ -Classroom* tutor_rooms;
+ %% btw, classrooms will have at least a bool for determining if they're a creator or not
+
+ %% (cont here by inserting the member vars and funcs that'll be required for this class)
+  }
+  class Classroom {
+ Media* class_media 
+ %% ^^ allows tutors to upload content referencing assignments etc. . IMPT: Thinking about Media class being an enum. 
+ user* creators
+ %% ^^ allows tutor(s) to collaborate teaching certain subjects. 
+ Posts* list_posts
+ %% (cont here by inserting the member vars and funcs that'll be required for this class)[will need funcs for CRUDing data referenced by container member vars. NOTE: THis is really for UML purposes since this will be carried out using HTTP requests to the database and things like that. ]
+  }
+  class Client {
+  -Classrooms* client_classes;
+ %% (cont here by inserting the member vars and funcs that'll be required for this class)[will need funcs for CRUDing data referenced by container member vars. NOTE: THis is really for UML purposes since this will be carried out using HTTP requests to the database and things like that. ]
+  }
+  class Message {
+     %% bool isGroup
+     %% int groupNum; 
+      -Date* time_sent;
+      #String* content;
+      -Media* pictures;
+     %% ^^ will be used to keep track of placement of messages
+       user* recipients_;
+     %% NOTE: Need to consider how order of messages in a group chat or non-group chat will be 
+     %% kept consistent. First thing I thought about is utilizing the date object.  Due to complexity, goal is to ignore the inclusion of group chats for now. 
+     %% NOTE: May need to have enum for Media. 
+
+ %% (cont here by inserting the member vars and funcs that'll be required for this class)[will need funcs for CRUDing data referenced by container member vars. NOTE: THis is really for UML purposes since this will be carried out using HTTP requests to the database and things like that. ]
+
+  }
+  class Post {
+     bool isPrivate; 
+     %% ^^ Resp for determining if post is for everyone or a select group of people. 
+ %% NOTE: One thing to consider is the size difference between posts and messages. Will have post inherit from messages. 
+ %% (cont here by inserting the member vars and funcs that'll be required for this class)[will need funcs for CRUDing data referenced by container member vars. NOTE: THis is really for UML purposes since this will be carried out using HTTP requests to the database and things like that. ]
+  }
+  %%(cont here)
+  User <|-- Tutor
+  User <|-- Client
+  Message <|-- Post
+  %% NOTE: In future, decide whether or not Group and Classroom refer to the same thing. 
+
+%% end of ClassDiagram 2 for idea #11
 
 ```
 
