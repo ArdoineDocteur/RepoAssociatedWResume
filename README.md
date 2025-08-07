@@ -477,13 +477,14 @@ Objective: Created a Sheep Scheduler using the Min Heap Data structure.
 
 | Topic of Specialization | Brief Description of how I am able to excel in this Aspect |
 | --- | --- |
-| Computer Programming  | Well versed in numerous low-level languages which include but are not limited to Java, C++, C to. Well versed in numerous high-level langauges which include but are not limited to Python, JavaScript, Golang, and PHP. Possess ability to convert abstract solutions into computer comprehensible solutions through psuedocode which contributes to my ability to solve complex computer programming problems.  |
-| Project Management  | Well versed in tools that are used to facilitate the project lifecycle which include but are not limited to LaTeX and Mermaid.js.  |
-| System Administration | Multifaceted in CLI tools for Windows, MAC OS, and Linux. Possess ability to conduct user management, and group management in using command prompt and Linux CLI for Windows and Linux systems respectively. Also adept in identifying patterns and exploiting them to automate solutions.    |
+| Computer Programming  | Well versed in numerous low-level languages which include but are not limited to Java, C++, and C. Well versed in numerous high-level langauges which include but are not limited to Python, JavaScript, Golang, and PHP. Possess ability to convert abstract solutions into computer comprehensible solutions through psuedocode which contributes to my ability to solve complex computer programming problems.  |
+| Project Management  | Well versed in tools that are used to facilitate the project lifecycle which include but are not limited to LaTeX and Mermaid.js. Possess ability to utilize tools that incentivize Continuous Integration and Continuous Development. Well versed in strategies and methodologies that are inspired by the Universal Development Cycle.   |
+| System Administration | Multifaceted in CLI tools for Windows, MAC OS, and Linux. Possess ability to conduct user management, and group management in using command prompt and Linux CLI for Windows and Linux systems respectively. Adept in scripting languages including but not limited to Bash Scirpting, Zsh Scripting, and Powershell Scripting. Also adept in identifying patterns and exploiting them to automate solutions.    |
 | Relational Database Design & Development | (coming soon!) |
 | NoSQL Database Design & Development |  |
 | Database Management |  |
 | Object-Oriented Programming & Design |  |
+| Functional Programming & Design |  |
 | Full Stack Development/Engineering |  |
 | Full Stack Design |  |
 | Web Development |  |
