@@ -477,10 +477,10 @@ Objective: Created a Sheep Scheduler using the Min Heap Data structure.
 
 | Topic of Specialization | Brief Description of how I am able to excel in this Aspect |
 | --- | --- |
-| Computer Programming  | (coming soon!) |
-| Project Management  |  |
-| System Administration |  |
-| Relational Database Design & Development |  |
+| Computer Programming  | Well versed in numerous low-level languages which include but are not limited to Java, C++, C to. Well versed in numerous high-level langauges which include but are not limited to Python, JavaScript, Golang, and PHP. Possess ability to convert abstract solutions into computer comprehensible solutions through psuedocode which contributes to my ability to solve complex computer programming problems.  |
+| Project Management  | Well versed in tools that are used to facilitate the project lifecycle which include but are not limited to LaTeX and Mermaid.js.  |
+| System Administration | Multifaceted in CLI tools for Windows, MAC OS, and Linux. Possess ability to conduct user management, and group management in using command prompt and Linux CLI for Windows and Linux systems respectively. Also adept in identifying patterns and exploiting them to automate solutions.    |
+| Relational Database Design & Development | (coming soon!) |
 | NoSQL Database Design & Development |  |
 | Database Management |  |
 | Object-Oriented Programming & Design |  |
@@ -504,16 +504,17 @@ Objective: Created a Sheep Scheduler using the Min Heap Data structure.
 [Personal Note]: <> "Here is the list of topics that I am learning to do at this point: Need to also make a list of technologies I am currently working towards learning: 1) Manufacturing Systems, 2) CAD, 3) HMI, 4) Network Administration, 5) Advanced Digital Design, 6) (cont here)" 
 
 
-| Interest | Brief Description of why I am learning certain subject |
+| Other Topics I am Interested in | Brief Description of why I am learning certain subject |
 | --- | --- |
 | (coming soon!) |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| Manufacturing Systems |  |
+| Flight Systems |  |
+| CAD[Computer Aided Design] |  |
+| CAE[Computer Aided Engineering] |  |
+| CAM[Computer Aided Manufacturing] |  |
+| CIM[Computer Integrated Manufacturing] |  |
+| HMI[Human Machine Interfacing] |  |
+| Cloud Computing  |  |
 |  |  |
 |  |  |
 |  |  |
