@@ -353,6 +353,13 @@ flowchart TB
     %% PN: The stuff above will be the template that I use to map out func of future projects!
 
     %% body of how system will react to implicit and explicit requests by user via http. 
+      subgraph systemReactions
+        direction TB
+
+        end
+      subgraph rel-Sets-rep
+        direction TB
+      %% (cont here by modifying inptu below by making it general to prep it for specialization w.r.t the idea at hand). UPDATE #1: 100% complete
       %% (cont here by modifying inptu below by making it general to prep it for specialization w.r.t the idea at hand). UPDATE #1: 100% complete
       respIntf0["System receives data x that determines y, resulting in (x,y) where x &in; set of 2-tuples containing username and password and sends a bool value if (x,y) &in; &rho; where &rho; = x &in; U(users) in database."] --> respIntf0.1["System sends data z that determines a, resulting in (z,a) where z &in; U(users) and a &in; {clients &cup; tutors', tutors &cup; clients', organization, (cont here if applicable), <insert elements relevant to assigning membership to user>} and sends a bool value if (z,a) &in; &rho; where &rho; = z is a y."] 
       respIntf0.1 --> respIntf0.1.0["System receives data from user x requesting access to w, resulting in data retreival from database referencing data associated with w where w &in; {Tutor Board, tutorRequests({a : a &ne; x}), [cont here]<insert elements relevant to data that is requested by user(s)>}"] --> respInf0.1.1["If (x,w) &nin; &cup;<sub>1 &le; i &le; n</sub> &rho;<sub>i</sub>, then user isn't valid. The n relations are as follows: {<insert the relations between data and user requests that permit the request and retrieval of the data>}"]
@@ -361,10 +368,14 @@ flowchart TB
       respIntf0.1 --> respIntf0.4["System receives data from user x requesting CREATION to u, resulting in data CREATION and adding it to database referencing data associated with u where u &in; {accountCreation(x),Media(x), tutorRequests(x) <insert elements that are properties(x) associated with user x>}"]
 
       end
+      subgraph regularVersion
+      direction TB
+        respIntfReg0["in progress"]
 
       %% (cont here at descIntf0.2.1[by addressing all cases where data may be modified]) 
       %%, need to go back to UX desc and think about how relations can be used to describe modifying data, creating data, and deleting data[basically using relations to allow CRUD operations])[NOTE: In future, when writing powerpoint, goal is to transform these relations into nodes and edges to ensure that anyone can understand this process][Note as of 6/13/25: This was complete, this will be the approach taken for the rest of the backend procedures going forward. Will also have relation-sets verison as a subgraph and have the expanded, non-relation-sets version as a subgraph. 
       end
+      systemReactions --> rel-Sets-rep & regularVersion
 
 
     %%end of body of how system will react to implicit and explicit requests by user via http
