@@ -493,11 +493,11 @@ Objective: Created a Sheep Scheduler using the Min Heap Data structure.
 | Computer Programming  | Well versed in numerous low-level languages which include but are not limited to Java, C++, and C. Well versed in numerous high-level langauges which include but are not limited to Python, JavaScript, Golang, and PHP. Possess ability to convert abstract solutions into computer comprehensible solutions through psuedocode which contributes to my ability to solve complex computer programming problems.  |
 | Project Management  | Well versed in tools that are used to facilitate the project lifecycle which include but are not limited to LaTeX and Mermaid.js. Possess ability to utilize tools that incentivize Continuous Integration and Continuous Development. Well versed in strategies and methodologies that are inspired by the Universal Development Cycle.   |
 | System Administration | Multifaceted in CLI tools for Windows, MAC OS, and Linux. Possess ability to conduct user management, and group management in using command prompt and Linux CLI for Windows and Linux systems respectively. Adept in scripting languages including but not limited to Bash Scirpting, Zsh Scripting, and Powershell Scripting. Also adept in identifying patterns and exploiting them to automate solutions.    |
-| Relational Database Design & Development | (coming soon!) |
-| NoSQL Database Design & Development |  |
-| Database Management |  |
-| Object-Oriented Programming & Design |  |
-| Functional Programming & Design |  |
+| Relational Database Design & Development | Possess ability to map complex objects explicitly and implicitly mentioned in a desired UX experience to an Entity Relationship Diagram. Possess the ability to correctly identify primary keys and utilize foreign keys to identify unique tuples. Also capable of implementing Functional Dependencies in an ERD to prevent data loss. Adept at normalizing databases to minimize redundancy.   |
+| NoSQL Database Design & Development | Possess ability to map complex objects explicitly and implicitly mentioned in a desired UX experience to an UML Diagram. Adept in numerous NoSQL DBMSs which include, but are not limited to, MongoDB.   |
+| Database Management | Possess ability to evaluate databases by mapping current objects into an ERD to obtain an overview of what the databases represent. Additionally, I am capable of implementing an ERD into a database through the use of SQL scripting. Adept in MySQL, Microsoft SQL Server, Oracle, and PHP. Also capable of writing MongoDB scripts as well.   |
+| Object-Oriented Programming & Design | Well adept in the terminologies utilized in Class Diagrams. Well adept in the implementation of class relationships which include but are not limited to: a) Inheritance, b) Realization[aka Implementation], c) Composition, d) Association, and e) Aggregation.   |
+| Functional Programming & Design | (coming soon!) |
 | Full Stack Development/Engineering |  |
 | Full Stack Design |  |
 | Web Development |  |
