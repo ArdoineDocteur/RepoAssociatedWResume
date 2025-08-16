@@ -495,13 +495,17 @@ Objective: Created a Sheep Scheduler using the Min Heap Data structure.
 | System Administration | Multifaceted in CLI tools for Windows, MAC OS, and Linux. Possess ability to conduct user management, and group management in using command prompt and Linux CLI for Windows and Linux systems respectively. Adept in scripting languages including but not limited to Bash Scirpting, Zsh Scripting, and Powershell Scripting. Also adept in identifying patterns and exploiting them to automate solutions.    |
 | Relational Database Design & Development | Possess ability to map complex objects explicitly and implicitly mentioned in a desired UX experience to an Entity Relationship Diagram. Possess the ability to correctly identify primary keys and utilize foreign keys to identify unique tuples. Also capable of implementing Functional Dependencies in an ERD to prevent data loss. Adept at normalizing databases to minimize redundancy.   |
 | NoSQL Database Design & Development | Possess ability to map complex objects explicitly and implicitly mentioned in a desired UX experience to an UML Diagram. Adept in numerous NoSQL DBMSs which include, but are not limited to, MongoDB.   |
+| Data Modeling |  |
+| Data Visualization |  |
+| Data Structures & Algorithms |  |
 | Database Management | Possess ability to evaluate databases by mapping current objects into an ERD to obtain an overview of what the databases represent. Additionally, I am capable of implementing an ERD into a database through the use of SQL scripting. Adept in MySQL, Microsoft SQL Server, Oracle, and PHP. Also capable of writing MongoDB scripts as well.   |
-| Object-Oriented Programming & Design | Well adept in the terminologies utilized in Class Diagrams. Well adept in the implementation of class relationships which include but are not limited to: a) Inheritance, b) Realization[aka Implementation], c) Composition, d) Association, and e) Aggregation.   |
+| Object-Oriented Programming & Design | Well adept in the terminologies utilized in Class Diagrams. Well adept in the implementation of class relationships which include but are not limited to: a) Inheritance, b) Realization[aka Implementation], c) Composition, d) Association, and e) Aggregation. Also capable of transitioning these relationships from the theoretical to the practical domain through numerous object-oriented programming langauges which include, but are not limited to, Java, C++, C#, Visual Basic, and PHP. Also adept at identifying implicit class relationships that allude to the potential use of polymorphisim to improve the efficiency of programs.  |
 | Functional Programming & Design | Possess ability to identify input(s)-output(s) relationships in complex situations to map them to functions that host and permit the existence of these input-output relationships. Also possess ability to utilize psuedocode to describe the environment for these respective relationships to transfer between the theoretical and practical domains.  |
 | Full Stack Development/Engineering | Well adept in implementing UI and UX designs using numerous tech stacks which include but are not limited to MERN, MEAN, and LAMP Stack. Also adept in utiliziing widget frameworks which include but are not limited to Qt C++ and Python's Tkinter. Also adept in modular programming to breed opportunities for reusing components to solve other technical problems.  |
 | Full Stack Design | (coming soon!) |
 | Web Development |  |
 | .NET Development |  |
+| Software Architecture |  |
 | Application Development & Design |  |
 | Embedded Software Development |  |
 | Process Management & Automation |  |
@@ -510,9 +514,10 @@ Objective: Created a Sheep Scheduler using the Min Heap Data structure.
 | Simulations Development |  |
 | System Engineering & Design|  |
 | Signals and Systems |  |
+| Circuit Analysis & Design |  |
+| Computer Architecture |  |
 
-[Personal Note]: <> "Here is the list of topics that I can do at this point: To help, brainstorm a list here: 1) Computer Programming, 2) project management, 3) System Administration, 4) Relational Database Design, 5) NoSQL Database Design, 6) Database Management, 7) Software Engineering/Development, 8) Full Stack Development/Engineering, 9) Web Development, 10) .NET Development, 11) Embedded Software Development, 12) Process Management, 13) Computer and Information Systems Management[NOTE: Can be proven by building business applications], 14) Signals and Systems[since it encompasses ability to analyze circuits], 15) Operating Systems, 16) Simulations Development[through my knowledge of numerical methods], 17) System Engineering & Design, 18) Software Architecture, 19) Simulation Design?[due to prowess in PHYS 211 and PHYS 212?], 20) Full Stack Design, 21) Application Development, 22) (cont here)"
-
+[Personal Note]: <> "Here is the list of topics that I can do at this point: To help, brainstorm a list here:  1) Computer Programming, 2) project management, 3) System Administration, 4) Relational Database Design, 5) NoSQL Database Design, 6) Database Management, 7) Software Engineering/Development, 8) Full Stack Development/Engineering, 9) Web Development, 10) .NET Development, 11) Embedded Software Development, 12) Process Management, 13) Computer and Information Systems Management[NOTE: Can be proven by building business applications], 14) Signals and Systems[since it encompasses ability to analyze circuits], 15) Operating Systems, 16) Simulations Development[through my knowledge of numerical methods], 17) System Engineering & Design, 18) Software Architecture, 19) Simulation Design?[due to prowess in PHYS 211 and PHYS 212?], 20) Full Stack Design, 21) Application Development, 22) Data Modeling, 23) Data Visualization, 24) Digital Logic Design, 25) Data Structures and Algorithms, 26) Circuit Analysis & Design, 27) Quality Assurance, 28)     (cont here) 
 ### Interest/Topics Learning Asynchronously
 
 [Personal Note]: <> "Here is the list of topics that I am learning to do at this point: Need to also make a list of technologies I am currently working towards learning: 1) Manufacturing Systems, 2) CAD, 3) HMI, 4) Network Administration, 5) Advanced Digital Design, 6) (cont here)" 
