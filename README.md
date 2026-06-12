@@ -55,11 +55,11 @@ into files, and WILL create a makefile for running the program as well.
 #### [Chore App : MERN](https://github.com/Darnell-Chen/SMS-RemindR)
 - Brief Description: SMS RemindR is a web app that allows you to schedule notifications via SMS, Email, and Discord. Built using the MERN stack, it features both a backend and frontend framework to ensure seamless operation and user experience.
 
-<<<<<<< HEAD
 =======
 #### [CssEditorTerminal : Python](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/CssEditorTerminal(Python))
 
 Purpose: Create a Terminal System for modifying the appearance of a HTML file.
+
 ```txt
 Abstract Representation of vision for project
 
@@ -83,6 +83,7 @@ for that particular css selection.
 #### [Guessing Game : C++](https://github.com/ArdoineDocteur/RepoAssociatedWResume/tree/main/GuessingGame(c%2B%2B))
 
 Purpose: Created a guessing game using dynamic memory allocation through the use of unique pointers using C++
+
 ```txt
 Abstract Representation of vision for project
 
